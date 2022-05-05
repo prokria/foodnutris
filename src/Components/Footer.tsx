@@ -1,11 +1,21 @@
-import {Box, Typography} from '@mui/material';
-import Copyright from './Copyright';
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Copyright from "./Copyright";
 
-export default function Footer() {
+interface FooterProps {
+  description: string;
+  title: string;
+}
+
+export default function Footer(props: FooterProps) {
+  const { description, title } = props;
+
   return (
-    <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+    <Box component="footer" sx={{ bgcolor: "background.paper", py: 6 }}>
+      <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          {title}
         </Typography>
         <Typography
           variant="subtitle1"
@@ -13,9 +23,10 @@ export default function Footer() {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          {description}
         </Typography>
         <Copyright />
-      </Box>
-  )
+      </Container>
+    </Box>
+  );
 }

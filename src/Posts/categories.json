@@ -1,0 +1,72 @@
+[
+  {
+    "id": 45,
+    "count": 1,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/food-nutrition/",
+    "name": "Food Nutrition",
+    "slug": "food-nutrition",
+    "taxonomy": "category",
+    "parent": 0
+  },
+  {
+    "id": 27,
+    "count": 1,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/fruits-nutrients/",
+    "name": "Fruits Nutrients",
+    "slug": "fruits-nutrients",
+    "taxonomy": "category",
+    "parent": 0
+  },
+  {
+    "id": 4,
+    "count": 1,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/healthy-cooking/",
+    "name": "Healthy Cooking",
+    "slug": "healthy-cooking",
+    "taxonomy": "category",
+    "parent": 0
+  },
+  {
+    "id": 5,
+    "count": 1,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/metabolism/",
+    "name": "Metabolism",
+    "slug": "metabolism",
+    "taxonomy": "category",
+    "parent": 0
+  },
+  {
+    "id": 6,
+    "count": 2,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/nutritional-science/",
+    "name": "Nutritional Science",
+    "slug": "nutritional-science",
+    "taxonomy": "category",
+    "parent": 0
+  },
+  {
+    "id": 7,
+    "count": 2,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/therapeutic-nutrition/",
+    "name": "Therapeutic Nutrition",
+    "slug": "therapeutic-nutrition",
+    "taxonomy": "category",
+    "parent": 0
+  },
+  {
+    "id": 1,
+    "count": 0,
+    "description": "",
+    "link": "https://foodnutris.com/blog/category/uncategorized/",
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "taxonomy": "category",
+    "parent": 0
+  }
+]
