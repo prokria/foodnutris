@@ -1,11 +1,23 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./Pages/Landing";
+import Home from "./Pages/Home";
+import Layout from "./Components/Layout";
+import NoPage from "./Pages/NoPage";
+import Category from "./Pages/Category";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="category" element={<Category />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

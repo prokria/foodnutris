@@ -1,26 +1,25 @@
-import * as React from "react";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
+import { useState, useEffect } from "react";
+import { Toolbar, IconButton, Typography, Link } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import categories from "../Posts/categories.json";
 
-interface HeaderProps {
-  sections: ReadonlyArray<{
-    title: string;
-    url: string;
-  }>;
-  title: string;
-}
+type MenuType = { title: string; url: string };
+export default function Header() {
+  const [menus, setMenus] = useState<MenuType[]>([]);
 
-export default function Header(props: HeaderProps) {
-  const { sections, title } = props;
+  useEffect(() => {
+    const allMenus: MenuType[] = [{ title: "Home", url: "/" }];
+    if (categories) {
+      categories.forEach((cat: any) =>
+        allMenus.push({ title: cat.name, url: `/category/${cat.slug}` })
+      );
+    }
+    setMenus(allMenus);
+  }, []);
 
   return (
-    <React.Fragment>
+    <>
       <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Button size="small">Subscribe</Button>
         <Typography
           component="h2"
           variant="h5"
@@ -29,33 +28,39 @@ export default function Header(props: HeaderProps) {
           noWrap
           sx={{ flex: 1 }}
         >
-          {title}
+          <img src="/logo.png" alt="foodnutris" width="200" />
         </Typography>
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
-        </Button>
       </Toolbar>
       <Toolbar
         component="nav"
         variant="dense"
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
-        {sections.map((section) => (
+        {menus.map((section) => (
           <Link
             color="inherit"
             noWrap
             key={section.title}
             variant="body2"
             href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
+            sx={{
+              p: 1,
+              flexShrink: 0,
+              textDecoration: "none",
+              fontWeight: 600,
+              "&:hover": {
+                color: "#40407a",
+                backgroundColor: "#FFF",
+              },
+            }}
           >
             {section.title}
           </Link>
         ))}
       </Toolbar>
-    </React.Fragment>
+    </>
   );
 }

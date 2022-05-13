@@ -58,15 +58,5 @@
     "slug": "therapeutic-nutrition",
     "taxonomy": "category",
     "parent": 0
-  },
-  {
-    "id": 1,
-    "count": 0,
-    "description": "",
-    "link": "https://foodnutris.com/blog/category/uncategorized/",
-    "name": "Uncategorized",
-    "slug": "uncategorized",
-    "taxonomy": "category",
-    "parent": 0
   }
 ]
