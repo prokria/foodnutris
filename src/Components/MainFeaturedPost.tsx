@@ -5,19 +5,21 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 
-interface MainFeaturedPostProps {
-  post: {
-    description: string;
-    image: string;
-    imageText: string;
-    linkText: string;
-    title: string;
-  };
+export interface MainFeaturedPostPropsType {
+  description: string;
+  image: string;
+  imageText: string;
+  linkText: string;
+  title: string;
 }
 
-export default function MainFeaturedPost(props: MainFeaturedPostProps) {
-  const { post } = props;
-
+export default function MainFeaturedPost({
+  description,
+  image,
+  imageText,
+  linkText,
+  title,
+}: MainFeaturedPostPropsType) {
   return (
     <Paper
       sx={{
@@ -28,15 +30,15 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundImage: `url(${post.image})`,
+        backgroundImage: `url(/images/${image})`,
       }}
     >
       {/* Increase the priority of the hero background image */}
       {
         <img
           style={{ display: "none" }}
-          src={post.image}
-          alt={post.imageText}
+          src={`/images/${image}`}
+          alt={imageText}
         />
       }
       <Box
@@ -64,13 +66,13 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
               color="inherit"
               gutterBottom
             >
-              {post.title}
+              {title}
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
-              {post.description}
+              <div dangerouslySetInnerHTML={{ __html: description }}></div>
             </Typography>
             <Link variant="subtitle1" href="#">
-              {post.linkText}
+              {linkText}
             </Link>
           </Box>
         </Grid>
