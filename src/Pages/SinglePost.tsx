@@ -24,27 +24,43 @@ export default function SinglePost() {
   }, [slug]);
 
   return (
-    <Container sx={{ py: 2 }}>
+    <Container sx={{ py: 3 }}>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={9} md={9}>
           {post && (
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                image={`/images/${post.featured_media}`}
-                alt={post.slug}
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {post.title}
-                </Typography>
-                <Typography>
-                  <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-                </Typography>
-              </CardContent>
-            </Card>
+            <>
+              <Typography
+                variant="h5"
+                sx={{
+                  marginBottom: 4,
+                  marginTop: 2,
+                  textAlign: "center",
+                  fontWeight: 600,
+                }}
+              >
+                {post.title}
+              </Typography>
+
+              <Card
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  image={`/images/${post.featured_media}`}
+                  alt={post.slug}
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: post.content }}
+                    ></div>
+                  </Typography>
+                </CardContent>
+              </Card>
+            </>
           )}
         </Grid>
         <Grid item xs={12} sm={3} md={3}>

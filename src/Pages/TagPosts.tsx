@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import posts from "../Posts/all.json";
-import categories from "../Posts/categories.json";
+import tags from "../Posts/tags.json";
 import { useParams } from "react-router-dom";
 import Sidebar from "./../Components/Sidebar";
 
@@ -16,15 +16,15 @@ export default function Category() {
   const { slug } = useParams();
 
   useEffect(() => {
-    if (categories && categories.length && slug) {
+    if (tags && tags.length && slug) {
       const allCatPosts: any[] = [];
-      categories.forEach((categ: any) => {
+      tags.forEach((categ: any) => {
         if (categ.slug === slug) {
           setCategoryName(categ.name);
           if (posts && posts.length) {
             posts.map(
               (post: any) =>
-                post.categories?.includes(categ.id) && allCatPosts.push(post)
+                post.tags?.includes(categ.id) && allCatPosts.push(post)
             );
           }
         }
@@ -42,9 +42,7 @@ export default function Category() {
             sx={{ marginBottom: 4, marginTop: 2, textAlign: "center" }}
           >
             Posts for{" "}
-            <strong>
-              {categoryName ? categoryName : "Category Not Found"}
-            </strong>
+            <strong>{categoryName ? categoryName : "Tag Not Found"}</strong>
           </Typography>
           {categoryPosts.length ? (
             categoryPosts.map((post: any) => (

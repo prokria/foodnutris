@@ -22,7 +22,7 @@ export default function Sidebar() {
         tags.map((tag: any) => (
           <Link
             display="inline"
-            href={`/tags/${tag.slug}`}
+            href={`/tag/${tag.slug}`}
             key={tag.id}
             sx={{
               textDecoration: "none",
