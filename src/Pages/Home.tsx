@@ -1,22 +1,61 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import MainFeaturedPost from "../Components/MainFeaturedPost";
 import FeaturedPost from "../Components/FeaturedPost";
-import Main from "../Components/Main";
-import featuredPosts from "../Posts/featuredPost.json";
-import mainFeaturedPost from "../Posts/mainFeaturedPost.json";
+import Blog from "../Components/Blog";
+import posts from "../Posts/all.json";
 
 export default function Home() {
+  const [latests, setLatests] = useState<any[]>([]);
+  const [mainFeatured, setMainFeatured] = useState<any>(null);
+  const [featureds, setFeatureds] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (posts && posts.length) {
+      const latestPosts: any[] = [];
+      const featuredPosts: any[] = [];
+      posts.forEach((post: any, index: number) => {
+        if (index < 5) {
+          latestPosts.push(post);
+        }
+        if (post.type === "featured") {
+          featuredPosts.push(post);
+        }
+        if (post.type === "mainfeatured") {
+          setMainFeatured(post);
+        }
+      });
+      setLatests(latestPosts);
+      setFeatureds(featuredPosts);
+    }
+  }, []);
+
   return (
     <>
-      <MainFeaturedPost post={mainFeaturedPost} />
+      {mainFeatured && (
+        <MainFeaturedPost
+          description={mainFeatured.excerpt}
+          image={mainFeatured.featured_media}
+          imageText={mainFeatured.slug}
+          title={mainFeatured.title}
+          linkText={mainFeatured.link}
+        />
+      )}
+
       <Grid container spacing={4}>
-        {featuredPosts.map((post: any) => (
-          <FeaturedPost key={post.title} post={post} />
+        {featureds.map((post: any) => (
+          <FeaturedPost
+            key={post.id}
+            description={mainFeatured.excerpt}
+            image={mainFeatured.featured_media}
+            imageText={mainFeatured.slug}
+            title={mainFeatured.title}
+            linkText={mainFeatured.link}
+          />
         ))}
       </Grid>
       <Grid container spacing={5} sx={{ mt: 3 }}>
-        <Main />
+        <Blog title="Latest Posts" posts={latests} />
       </Grid>
     </>
   );
