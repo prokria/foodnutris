@@ -3,7 +3,10 @@ import { Toolbar, IconButton, Typography, Link } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import categories from "../Posts/categories.json";
 
-type MenuType = { title: string; url: string };
+type MenuType = {
+  title: string;
+  url: string;
+};
 export default function Header() {
   const [menus, setMenus] = useState<MenuType[]>([]);
 
