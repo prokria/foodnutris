@@ -6,18 +6,18 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-type SinglePostPropsType = {
+type BlogItemPropsType = {
   title: string;
   description: string;
   image: string;
   imageLabel: string;
 };
-export default function SinglePost({
+export default function BlogItem({
   title,
   description,
   image,
   imageLabel,
-}: SinglePostPropsType) {
+}: BlogItemPropsType) {
   return (
     <Container sx={{ py: 4 }} maxWidth="md">
       <Grid container spacing={4}>

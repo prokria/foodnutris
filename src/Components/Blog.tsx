@@ -2,7 +2,7 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import SinglePost from "./SinglePost";
+import BlogItem from "./BlogItem";
 import Sidebar from "./Sidebar";
 
 type BlogPropsType = {
@@ -28,7 +28,7 @@ export default function Blog({ title, posts }: BlogPropsType) {
         <Divider />
         {posts &&
           posts.map((post: any) => (
-            <SinglePost
+            <BlogItem
               title={post.title}
               description={post.excerpt}
               image={`/images/${post.featured_media}`}
@@ -36,7 +36,9 @@ export default function Blog({ title, posts }: BlogPropsType) {
             />
           ))}
       </Grid>
-      <Sidebar />
+      <Grid item xs={12} md={3}>
+        <Sidebar />
+      </Grid>
     </>
   );
 }
