@@ -17,6 +17,7 @@ export default function Header() {
         allMenus.push({ title: cat.name, url: `/category/${cat.slug}` })
       );
     }
+    allMenus.push({ title: "BMI Calculator", url: "bmi-calculator" });
     setMenus(allMenus);
   }, []);
 
