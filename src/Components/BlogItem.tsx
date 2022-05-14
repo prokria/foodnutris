@@ -1,5 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
+import Link from "@mui/material/Link";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
@@ -11,12 +12,14 @@ type BlogItemPropsType = {
   description: string;
   image: string;
   imageLabel: string;
+  link: string;
 };
 export default function BlogItem({
   title,
   description,
   image,
   imageLabel,
+  link,
 }: BlogItemPropsType) {
   return (
     <Container sx={{ py: 4 }} maxWidth="md">
@@ -27,9 +30,11 @@ export default function BlogItem({
           >
             <CardMedia component="img" image={image} alt={imageLabel} />
             <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h5" component="h2">
-                {title}
-              </Typography>
+              <Link underline="none" href={link}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {title}
+                </Typography>
+              </Link>
               <Typography>
                 <div dangerouslySetInnerHTML={{ __html: description }}></div>
               </Typography>

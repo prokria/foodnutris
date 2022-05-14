@@ -15,7 +15,7 @@ export default function Home() {
       const latestPosts: any[] = [];
       const featuredPosts: any[] = [];
       posts.forEach((post: any, index: number) => {
-        if (index < 5) {
+        if (index > 2 && index < 6) {
           latestPosts.push(post);
         }
         if (post.type === "featured") {
@@ -46,11 +46,11 @@ export default function Home() {
         {featureds.map((post: any) => (
           <FeaturedPost
             key={post.id}
-            description={mainFeatured.excerpt}
-            image={mainFeatured.featured_media}
-            imageText={mainFeatured.slug}
-            title={mainFeatured.title}
-            linkText={mainFeatured.link}
+            description={post.excerpt}
+            image={post.featured_media}
+            imageText={post.slug}
+            title={post.title}
+            linkText={post.link}
           />
         ))}
       </Grid>

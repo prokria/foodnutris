@@ -33,6 +33,7 @@ export default function Blog({ title, posts }: BlogPropsType) {
               description={post.excerpt}
               image={`/images/${post.featured_media}`}
               imageLabel={post.glycolysis}
+              link={post.link}
             />
           ))}
       </Grid>

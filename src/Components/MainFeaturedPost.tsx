@@ -1,8 +1,8 @@
 import * as React from "react";
 import Paper from "@mui/material/Paper";
+import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 
 export interface MainFeaturedPostPropsType {
@@ -66,14 +66,16 @@ export default function MainFeaturedPost({
               color="inherit"
               gutterBottom
             >
-              {title}
+              <Link
+                sx={{ textDecoration: "none", color: "#FFF" }}
+                href={linkText}
+              >
+                {title}
+              </Link>
             </Typography>
             <Typography variant="h5" color="inherit" paragraph>
               <div dangerouslySetInnerHTML={{ __html: description }}></div>
             </Typography>
-            <Link variant="subtitle1" href="#">
-              {linkText}
-            </Link>
           </Box>
         </Grid>
       </Grid>

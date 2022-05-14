@@ -4,6 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
 import posts from "../Posts/all.json";
 import tags from "../Posts/tags.json";
@@ -59,9 +60,11 @@ export default function Category() {
                   alt={post.slug}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {post.title}
-                  </Typography>
+                  <Link underline="none" href={post.link}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {post.title}
+                    </Typography>
+                  </Link>
                   <Typography>
                     <div
                       dangerouslySetInnerHTML={{ __html: post.excerpt }}
