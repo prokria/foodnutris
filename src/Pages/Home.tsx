@@ -55,7 +55,7 @@ export default function Home() {
         ))}
       </Grid>
       <Grid container spacing={5} sx={{ mt: 3 }}>
-        <Blog title="Latest Posts" posts={latests} />
+        <Blog title="সর্বশেষ পোস্ট সমূহ" posts={latests} />
       </Grid>
     </>
   );

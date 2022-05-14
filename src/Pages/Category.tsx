@@ -39,13 +39,12 @@ export default function Category() {
       <Grid container spacing={4}>
         <Grid item xs={12} sm={9} md={9}>
           <Typography
-            variant="h5"
+            variant="h6"
             sx={{ marginBottom: 4, marginTop: 2, textAlign: "center" }}
           >
-            Posts for{" "}
-            <strong>
-              {categoryName ? categoryName : "Category Not Found"}
-            </strong>
+            {categoryName
+              ? `${categoryName} এর পোস্ট সমূহ`
+              : "Category Not Found"}
           </Typography>
           {categoryPosts.length ? (
             categoryPosts.map((post: any) => (
