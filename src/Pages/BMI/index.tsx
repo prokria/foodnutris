@@ -51,7 +51,7 @@ export default function BmiCalculator() {
 
   return (
     <Paper sx={{ padding: 5, margin: 3, minHeight: "40vh" }}>
-      <Typography variant="h4" align="center">
+      <Typography variant="h6" align="center">
         আপনার বিএমআই/BMI পরিমাপ করুন
       </Typography>
       <Stepper
