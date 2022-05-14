@@ -32,10 +32,10 @@ export default function Calculations({ bmi, ideal, normal }: any) {
   };
 
   return (
-    <Box sx={{ padding: 2 }}>
+    <Box sx={{ padding: 2, textAlign: "center" }}>
       <Grid container spacing={2}>
         <Grid item sm={12} xs={12}>
-          <Card variant="outlined" sx={{ padding: 2, margin: 1 }}>
+          <Card variant="outlined" sx={{ padding: 1, margin: 1 }}>
             <h3>আপনার বর্তমান BMI/বিএমআই</h3>
             <h1>{banglaNumber(bmi)}</h1>
             <h5>{healthStatus()}</h5>
@@ -43,27 +43,26 @@ export default function Calculations({ bmi, ideal, normal }: any) {
         </Grid>
       </Grid>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
-          <Card variant="outlined" sx={{ padding: 2, margin: 1 }}>
+        <Grid item xs={12} sm={12}>
+          <Card variant="outlined" sx={{ padding: 1, margin: 1 }}>
             <p>
               আদর্শ ওজন: <strong>{banglaNumber(ideal)}</strong>
             </p>
           </Card>
         </Grid>
-        <Grid item container direction="column" xs={12} sm={6}>
-          <Card variant="outlined" sx={{ padding: 2, margin: 1 }}>
+        <Grid item container direction="column" xs={12} sm={12}>
+          <Card variant="outlined" sx={{ padding: 1, margin: 1 }}>
             <p>
-              স্বাভাবিক ওজন:{" "}
-              <strong>
-                {banglaNumber(normal.lower)} থেকে {banglaNumber(normal.upper)}
-              </strong>
+              স্বাভাবিক ওজন:
+              <strong>{banglaNumber(normal.lower)} </strong>
+              থেকে <strong>{banglaNumber(normal.upper)}</strong>
             </p>
           </Card>
         </Grid>
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12}>
-          <Card variant="outlined" sx={{ padding: 2, margin: 1 }}>
+          <Card variant="outlined" sx={{ padding: 1, margin: 1 }}>
             <h3>পরামর্শ</h3>
             <p>{healthSuggesion()}</p>
           </Card>
