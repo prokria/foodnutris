@@ -1,20 +1,37 @@
+import type { NextPage } from "next";
 import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
-import MainFeaturedPost from "../Components/MainFeaturedPost";
-import FeaturedPost from "../Components/FeaturedPost";
-import Blog from "../Components/Blog";
-import posts from "../Posts/all.json";
+import MainFeaturedPost from "../components/MainFeaturedPost";
+import FeaturedPost from "../components/FeaturedPost";
+import Blog from "../components/Blog";
+import axios from "axios";
 
-export default function Home() {
+const Home: NextPage = () => {
   const [latests, setLatests] = useState<any[]>([]);
   const [mainFeatured, setMainFeatured] = useState<any>(null);
   const [featureds, setFeatureds] = useState<any[]>([]);
+  const [allPosts, setAllPosts] = useState<any[]>([]);
 
   useEffect(() => {
-    if (posts && posts.length) {
+    axios
+      .get("https://arwa.info/foodnutrisdata/all.json")
+      .then(function (response) {
+        // handle success
+        if (response.status === 200) {
+          setAllPosts(response.data);
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (allPosts && allPosts.length) {
       const latestPosts: any[] = [];
       const featuredPosts: any[] = [];
-      posts.forEach((post: any, index: number) => {
+      allPosts.forEach((post: any, index: number) => {
         if (index > 2 && index < 6) {
           latestPosts.push(post);
         }
@@ -28,8 +45,7 @@ export default function Home() {
       setLatests(latestPosts);
       setFeatureds(featuredPosts);
     }
-  }, []);
-
+  }, [allPosts]);
   return (
     <>
       {mainFeatured && (
@@ -59,4 +75,6 @@ export default function Home() {
       </Grid>
     </>
   );
-}
+};
+
+export default Home;

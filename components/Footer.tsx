@@ -5,13 +5,14 @@ import Typography from "@mui/material/Typography";
 import Copyright from "./Copyright";
 import Link from "@mui/material/Link";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <Box component="footer" sx={{ bgcolor: "background.paper", py: 6 }}>
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
-          <img src="/logo.png" alt="foodnutris" width="150" />
+          <Image src="/logo.png" alt="foodnutris" width="150" height="50" />
         </Typography>
         <Link href="https://www.facebook.com/foodnutris" target="_blank">
           <Stack

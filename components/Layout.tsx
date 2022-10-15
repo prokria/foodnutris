@@ -1,20 +1,17 @@
-import { Outlet } from "react-router-dom";
 import { CssBaseline, Container } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const theme = createTheme();
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
         <Header />
-        <main>
-          <Outlet />
-        </main>
+        <main>{children}</main>
       </Container>
       <Footer />
     </ThemeProvider>
