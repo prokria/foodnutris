@@ -4,18 +4,34 @@ import Grid from "@mui/material/Grid";
 import MainFeaturedPost from "../components/MainFeaturedPost";
 import FeaturedPost from "../components/FeaturedPost";
 import Blog from "../components/Blog";
-import posts from "../PostsData/all.json";
+import axios from "axios";
 
 const Home: NextPage = () => {
   const [latests, setLatests] = useState<any[]>([]);
   const [mainFeatured, setMainFeatured] = useState<any>(null);
   const [featureds, setFeatureds] = useState<any[]>([]);
+  const [allPosts, setAllPosts] = useState<any[]>([]);
 
   useEffect(() => {
-    if (posts && posts.length) {
+    axios
+      .get("https://arwa.info/foodnutrisdata/all.json")
+      .then(function (response) {
+        // handle success
+        if (response.status === 200) {
+          setAllPosts(response.data);
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (allPosts && allPosts.length) {
       const latestPosts: any[] = [];
       const featuredPosts: any[] = [];
-      posts.forEach((post: any, index: number) => {
+      allPosts.forEach((post: any, index: number) => {
         if (index > 2 && index < 6) {
           latestPosts.push(post);
         }
@@ -29,7 +45,7 @@ const Home: NextPage = () => {
       setLatests(latestPosts);
       setFeatureds(featuredPosts);
     }
-  }, []);
+  }, [allPosts]);
   return (
     <>
       {mainFeatured && (
