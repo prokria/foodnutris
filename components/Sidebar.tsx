@@ -1,9 +1,26 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import tags from "../Posts/tags.json";
+import axios from "axios";
 
 export default function Sidebar() {
+  const [tags, setTags] = useState<any[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("https://arwa.info/foodnutrisdata/tags.json")
+      .then(function (response) {
+        // handle success
+        if (response.status === 200) {
+          setTags(response.data);
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }, []);
+
   return (
     <>
       <Typography

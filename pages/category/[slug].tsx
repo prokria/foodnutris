@@ -1,3 +1,4 @@
+import type { NextPage } from "next";
 import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -6,33 +7,64 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
-import posts from "../Posts/all.json";
-import tags from "../Posts/tags.json";
-import { useParams } from "react-router-dom";
-import Sidebar from "./../Components/Sidebar";
+import Sidebar from "../../Components/Sidebar";
+import axios from "axios";
+import { useRouter } from "next/router";
 
-export default function Category() {
+const Category: NextPage = () => {
   const [categoryName, setCategoryName] = useState("");
+  const [allPosts, setAllPosts] = useState<any[]>([]);
+  const [categories, setCategories] = useState<any[]>([]);
   const [categoryPosts, setCategoryPosts] = useState<any[]>([]);
-  const { slug } = useParams();
+  const router = useRouter();
+  const slug = router.query.slug;
 
   useEffect(() => {
-    if (tags && tags.length && slug) {
+    axios
+      .get("https://arwa.info/foodnutrisdata/categories.json")
+      .then(function (response) {
+        if (response.status === 200) {
+          setCategories(response.data);
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get("https://arwa.info/foodnutrisdata/all.json")
+      .then(function (response) {
+        // handle success
+        if (response.status === 200) {
+          setAllPosts(response.data);
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (categories && categories.length && slug) {
       const allCatPosts: any[] = [];
-      tags.forEach((categ: any) => {
+      categories.forEach((categ: any) => {
         if (categ.slug === slug) {
           setCategoryName(categ.name);
-          if (posts && posts.length) {
-            posts.map(
+          if (allPosts && allPosts.length) {
+            allPosts.map(
               (post: any) =>
-                post.tags?.includes(categ.id) && allCatPosts.push(post)
+                post.categories?.includes(categ.id) && allCatPosts.push(post)
             );
           }
         }
       });
       setCategoryPosts(allCatPosts);
     }
-  }, [slug]);
+  }, [allPosts, categories, slug]);
 
   return (
     <Container sx={{ py: 2 }}>
@@ -47,13 +79,14 @@ export default function Category() {
               : "Category Not Found"}
           </Typography>
           {categoryPosts.length ? (
-            categoryPosts.map((post: any) => (
+            categoryPosts.map((post: any, index: number) => (
               <Card
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   marginTop: 4,
                 }}
+                key={index}
               >
                 <CardMedia
                   component="img"
@@ -86,4 +119,5 @@ export default function Category() {
       </Grid>
     </Container>
   );
-}
+};
+export default Category;

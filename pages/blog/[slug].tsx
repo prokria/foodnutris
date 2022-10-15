@@ -1,26 +1,37 @@
 import { useState, useEffect } from "react";
+import type { NextPage } from "next";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import posts from "../Posts/all.json";
-import { useParams } from "react-router-dom";
-import Sidebar from "./../Components/Sidebar";
+import Sidebar from "../../Components/Sidebar";
+import axios from "axios";
+import { useRouter } from "next/router";
 
-export default function SinglePost() {
+const SinglePost: NextPage = () => {
   const [post, setPost] = useState<any>(null);
-  const { slug } = useParams();
+  const router = useRouter();
+  const slug = router.query.slug;
 
   useEffect(() => {
-    if (posts && posts.length && slug) {
-      posts.forEach((post: any, index: number) => {
-        if (post.slug === slug) {
-          setPost(post);
+    axios
+      .get("https://arwa.info/foodnutrisdata/all.json")
+      .then(function (response) {
+        // handle success
+        if (response.status === 200) {
+          response.data?.forEach((post: any, index: number) => {
+            if (post.slug === slug) {
+              setPost(post);
+            }
+          });
         }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
       });
-    }
   }, [slug]);
 
   return (
@@ -69,4 +80,5 @@ export default function SinglePost() {
       </Grid>
     </Container>
   );
-}
+};
+export default SinglePost;
