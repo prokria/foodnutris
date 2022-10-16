@@ -4,6 +4,7 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import Image from "next/image";
 
 export interface MainFeaturedPostPropsType {
   description: string;
@@ -35,10 +36,11 @@ export default function MainFeaturedPost({
     >
       {/* Increase the priority of the hero background image */}
       {
-        <img
+        <Image
           style={{ display: "none" }}
           src={`/images/${image}`}
           alt={imageText}
+          layout="fill"
         />
       }
       <Box

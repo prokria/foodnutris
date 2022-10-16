@@ -9,7 +9,7 @@ type BlogPropsType = {
   title: string;
   posts: any[];
 };
-export default function Blog({ title, posts }: BlogPropsType) {
+export default function BlogPosts({ title, posts }: BlogPropsType) {
   return (
     <>
       <Grid
@@ -27,8 +27,9 @@ export default function Blog({ title, posts }: BlogPropsType) {
         </Typography>
         <Divider />
         {posts &&
-          posts.map((post: any) => (
+          posts.map((post: any, index: number) => (
             <BlogItem
+              key={index}
               title={post.title}
               description={post.excerpt}
               image={`/images/${post.featured_media}`}
