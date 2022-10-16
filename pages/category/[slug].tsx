@@ -7,7 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Container from "@mui/material/Container";
-import Sidebar from "../../Components/Sidebar";
+import Sidebar from "../../components/Sidebar";
 import axios from "axios";
 import { useRouter } from "next/router";
 

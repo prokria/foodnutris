@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import MainFeaturedPost from "../components/MainFeaturedPost";
 import FeaturedPost from "../components/FeaturedPost";
-import Blog from "../components/Blog";
+import BlogPosts from "../components/BlogPosts";
 import axios from "axios";
 
 const Home: NextPage = () => {
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         ))}
       </Grid>
       <Grid container spacing={5} sx={{ mt: 3 }}>
-        <Blog title="সর্বশেষ পোস্ট সমূহ" posts={latests} />
+        <BlogPosts title="সর্বশেষ পোস্ট সমূহ" posts={latests} />
       </Grid>
     </>
   );

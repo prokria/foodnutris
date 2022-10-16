@@ -9,7 +9,7 @@ type BlogPropsType = {
   title: string;
   posts: any[];
 };
-export default function Blog({ title, posts }: BlogPropsType) {
+export default function BlogPosts({ title, posts }: BlogPropsType) {
   return (
     <>
       <Grid
