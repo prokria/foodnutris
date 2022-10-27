@@ -3,8 +3,8 @@ import { Toolbar, IconButton, Typography, Link as MUILink } from "@mui/material"
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import axios from "axios";
+import { BASEURL } from "../utilities/constants";
 import Link from 'next/link'
-
 
 type MenuType = {
   title: string;
@@ -14,7 +14,7 @@ export default function Header() {
   const [menus, setMenus] = useState<MenuType[]>([]);
   useEffect(() => {
     axios
-      .get("https://arwa.info/foodnutrisdata/categories.json")
+      .get(`${BASEURL}categories.json`)
       .then(function (response) {
         if (response.status === 200) {
           const allMenus: MenuType[] = [{ title: "Home", url: "/" }];

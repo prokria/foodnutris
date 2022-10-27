@@ -32,9 +32,9 @@ export default function FeaturedPost({
                 {title}
               </Link>
             </Typography>
-            <Typography variant="subtitle1" paragraph>
+            <div className="htmlContent">
               <div dangerouslySetInnerHTML={{ __html: description }}></div>
-            </Typography>
+            </div>
           </CardContent>
           <CardMedia
             component="img"

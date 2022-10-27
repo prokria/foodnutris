@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Sidebar from "../../components/Sidebar";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { BASEURL } from "../../utilities/constants";
 
 const TagPost: NextPage = () => {
   const [categoryName, setCategoryName] = useState("");
@@ -21,7 +22,7 @@ const TagPost: NextPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://arwa.info/foodnutrisdata/tags.json")
+      .get(`${BASEURL}tags.json`)
       .then(function (response) {
         if (response.status === 200) {
           setCategories(response.data);
@@ -35,7 +36,7 @@ const TagPost: NextPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://arwa.info/foodnutrisdata/all.json")
+      .get(`${BASEURL}all.json`)
       .then(function (response) {
         // handle success
         if (response.status === 200) {
