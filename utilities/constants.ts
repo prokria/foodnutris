@@ -1,0 +1,1 @@
+export const BASEURL = "https://blogfoodnutris.arwa.info/" ;
