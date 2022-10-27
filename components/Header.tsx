@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Toolbar, IconButton, Typography, Link } from "@mui/material";
+import { Toolbar, IconButton, Typography, Link as MUILink } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import axios from "axios";
 import { BASEURL } from "../utilities/constants";
+import Link from 'next/link'
 
 type MenuType = {
   title: string;
@@ -53,25 +54,27 @@ export default function Header() {
         variant="dense"
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
-        {menus.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{
-              p: 1,
-              flexShrink: 0,
-              textDecoration: "none",
-              fontWeight: 600,
-              "&:hover": {
-                color: "#40407a",
-                backgroundColor: "#FFF",
-              },
-            }}
-          >
-            {section.title}
+        {menus.map((section, index: number) => (
+          <Link href={section.url} key={index}>
+            <MUILink
+              color="inherit"
+              noWrap
+              key={section.title}
+              variant="body2"
+              sx={{
+                p: 1,
+                flexShrink: 0,
+                textDecoration: "none",
+                fontWeight: 600,
+                "&:hover": {
+                  color: "#40407a",
+                  backgroundColor: "#FFF",
+                },
+                cursor: 'pointer'
+              }}
+            >
+              {section.title}
+            </MUILink>
           </Link>
         ))}
       </Toolbar>
