@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     axios
-      .get(`${BASEURL}wp/v2/posts`)
+      .get(`${BASEURL}all.json`)
       .then(function (response) {
         // handle success
         if (response.status === 200) {

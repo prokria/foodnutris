@@ -75,9 +75,9 @@ export default function MainFeaturedPost({
                 {title}
               </Link>
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            <div className="mainFeturedContent">
               <div dangerouslySetInnerHTML={{ __html: description }}></div>
-            </Typography>
+            </div>
           </Box>
         </Grid>
       </Grid>

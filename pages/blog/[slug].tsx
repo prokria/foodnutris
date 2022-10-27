@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import Sidebar from "../../components/Sidebar";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { BASEURL } from "../../utilities/constants";
 
 const SinglePost: NextPage = () => {
   const [post, setPost] = useState<any>(null);
@@ -17,7 +18,7 @@ const SinglePost: NextPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://arwa.info/foodnutrisdata/all.json")
+      .get(`${BASEURL}all.json`)
       .then(function (response) {
         // handle success
         if (response.status === 200) {

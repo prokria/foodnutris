@@ -14,6 +14,26 @@ a {
 * {
   box-sizing: border-box;
 }
+/*======my-css========*/
+
+.more-link{
+  color: #1976d2 !important;
+}
+.htmlContent{
+
+}
+.mainFeturedContent{
+  display: block;
+  color: inherit;
+}
+
+.mainFeturedContent .more-link{
+  padding: 5px 5px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/*======my-css========*/
 
 @media (prefers-color-scheme: dark) {
   html {

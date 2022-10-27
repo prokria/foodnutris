@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import axios from "axios";
+import { BASEURL } from "../utilities/constants";
 
 export default function Sidebar() {
   const [tags, setTags] = useState<any[]>([]);
 
   useEffect(() => {
     axios
-      .get("https://arwa.info/foodnutrisdata/tags.json")
+      .get(`${BASEURL}tags.json`)
       .then(function (response) {
         // handle success
         if (response.status === 200) {
