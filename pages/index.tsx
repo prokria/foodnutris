@@ -5,6 +5,7 @@ import MainFeaturedPost from "../components/MainFeaturedPost";
 import FeaturedPost from "../components/FeaturedPost";
 import BlogPosts from "../components/BlogPosts";
 import axios from "axios";
+import { BASEURL } from "../utilities/constants";
 
 const Home: NextPage = () => {
   const [latests, setLatests] = useState<any[]>([]);
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     axios
-      .get("https://arwa.info/foodnutrisdata/all.json")
+      .get(`${BASEURL}all.json`)
       .then(function (response) {
         // handle success
         if (response.status === 200) {

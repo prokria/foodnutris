@@ -35,9 +35,9 @@ export default function BlogItem({
                   {title}
                 </Typography>
               </Link>
-              <Typography>
+              <div className="htmlContent">
                 <div dangerouslySetInnerHTML={{ __html: description }}></div>
-              </Typography>
+              </div>
             </CardContent>
           </Card>
         </Grid>
