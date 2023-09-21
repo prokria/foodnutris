@@ -1,1 +1,1 @@
-export const BASEURL = "https://arwa.info/foodnutrisdata/" ;
+export const BASEURL = "https://jahangirpial.com/foodnutrisdata/" ;
