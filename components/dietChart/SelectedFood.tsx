@@ -35,7 +35,7 @@ export default function SelectedFood({
       >
         Diet Chart
       </Typography>
-      <Accordion>
+      <Accordion disabled={!breakfast || !breakfast.length}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={MEALS.breakFast + "-diet"}
@@ -58,7 +58,7 @@ export default function SelectedFood({
             ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion disabled={!msnacks || !msnacks.length}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={MEALS.morningSnacks + "-diet"}
@@ -69,11 +69,18 @@ export default function SelectedFood({
         <AccordionDetails>
           {msnacks &&
             msnacks.map((item: FoodDataType) => (
-              <Typography key={item.id}>{item.name}</Typography>
+              <Chip
+                key={item.id}
+                label={item.name}
+                variant="outlined"
+                onDelete={() => removeFood(MEALS.morningSnacks, item.id)}
+                sx={{ margin: 0.5 }}
+                color={item.color}
+              />
             ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion disabled={!lunch || !lunch.length}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={MEALS.lunch + "-diet"}
@@ -84,11 +91,18 @@ export default function SelectedFood({
         <AccordionDetails>
           {lunch &&
             lunch.map((item: FoodDataType) => (
-              <Typography key={item.id}>{item.name}</Typography>
+              <Chip
+                key={item.id}
+                label={item.name}
+                variant="outlined"
+                onDelete={() => removeFood(MEALS.lunch, item.id)}
+                sx={{ margin: 0.5 }}
+                color={item.color}
+              />
             ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion disabled={!asnacks || !asnacks.length}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={MEALS.afternoonSnacks + "-diet"}
@@ -99,11 +113,18 @@ export default function SelectedFood({
         <AccordionDetails>
           {asnacks &&
             asnacks.map((item: FoodDataType) => (
-              <Typography key={item.id}>{item.name}</Typography>
+              <Chip
+                key={item.id}
+                label={item.name}
+                variant="outlined"
+                onDelete={() => removeFood(MEALS.afternoonSnacks, item.id)}
+                sx={{ margin: 0.5 }}
+                color={item.color}
+              />
             ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion disabled={!dinner || !dinner.length}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={MEALS.dinner + "-diet"}
@@ -114,11 +135,18 @@ export default function SelectedFood({
         <AccordionDetails>
           {dinner &&
             dinner.map((item: FoodDataType) => (
-              <Typography key={item.id}>{item.name}</Typography>
+              <Chip
+                key={item.id}
+                label={item.name}
+                variant="outlined"
+                onDelete={() => removeFood(MEALS.dinner, item.id)}
+                sx={{ margin: 0.5 }}
+                color={item.color}
+              />
             ))}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion disabled={!bsnacks || !bsnacks.length}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls={MEALS.bedSnacks + "-diet"}
@@ -129,7 +157,14 @@ export default function SelectedFood({
         <AccordionDetails>
           {bsnacks &&
             bsnacks.map((item: FoodDataType) => (
-              <Typography key={item.id}>{item.name}</Typography>
+              <Chip
+                key={item.id}
+                label={item.name}
+                variant="outlined"
+                onDelete={() => removeFood(MEALS.bedSnacks, item.id)}
+                sx={{ margin: 0.5 }}
+                color={item.color}
+              />
             ))}
         </AccordionDetails>
       </Accordion>

@@ -58,7 +58,14 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.morningSnacks) && (
-                <Typography key={item.id}>{item.name}</Typography>
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  variant="outlined"
+                  sx={{ margin: 0.5 }}
+                  onClick={() => addFood(MEALS.morningSnacks, item)}
+                  color={item.color}
+                />
               )
           )}
         </AccordionDetails>
@@ -75,7 +82,14 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.lunch) && (
-                <Typography key={item.id}>{item.name}</Typography>
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  variant="outlined"
+                  sx={{ margin: 0.5 }}
+                  onClick={() => addFood(MEALS.lunch, item)}
+                  color={item.color}
+                />
               )
           )}
         </AccordionDetails>
@@ -92,7 +106,14 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.afternoonSnacks) && (
-                <Typography key={item.id}>{item.name}</Typography>
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  variant="outlined"
+                  sx={{ margin: 0.5 }}
+                  onClick={() => addFood(MEALS.afternoonSnacks, item)}
+                  color={item.color}
+                />
               )
           )}
         </AccordionDetails>
@@ -109,7 +130,14 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.dinner) && (
-                <Typography key={item.id}>{item.name}</Typography>
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  variant="outlined"
+                  sx={{ margin: 0.5 }}
+                  onClick={() => addFood(MEALS.dinner, item)}
+                  color={item.color}
+                />
               )
           )}
         </AccordionDetails>
@@ -126,7 +154,38 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.bedSnacks) && (
-                <Typography key={item.id}>{item.name}</Typography>
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  variant="outlined"
+                  sx={{ margin: 0.5 }}
+                  onClick={() => addFood(MEALS.bedSnacks, item)}
+                  color={item.color}
+                />
+              )
+          )}
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="Others-content"
+          id="Others"
+        >
+          <Typography>Others</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          {foodData.map(
+            (item: FoodDataType) =>
+              item.meals.length === 0 && (
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  variant="outlined"
+                  sx={{ margin: 0.5 }}
+                  //   onClick={() => addFood(MEALS.morningSnacks, item)}
+                  color={item.color}
+                />
               )
           )}
         </AccordionDetails>
