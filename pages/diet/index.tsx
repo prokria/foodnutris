@@ -10,8 +10,9 @@ import {
   Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import foodData, { FoodDataType } from "../../utilities/foods";
+import { FoodDataType } from "../../utilities/foods";
 import { MEALS } from "../../utilities/constants";
+import FoodList from "../../components/dietChart/FoodList";
 
 const DietChart: NextPage = () => {
   const [breakfast, setBreakfast] = useState<FoodDataType[]>([]);
@@ -55,10 +56,10 @@ const DietChart: NextPage = () => {
         setLunch((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
         break;
       case MEALS.afternoonSnacks:
-        setLunch((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
+        setAsnacks((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
         break;
       case MEALS.bedSnacks:
-        setLunch((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
+        setBsnacks((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
         break;
       default:
         setDinner((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
@@ -69,121 +70,11 @@ const DietChart: NextPage = () => {
     <Container sx={{ py: 3 }}>
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
-          <Typography
-            variant="h6"
-            component="h6"
-            sx={{ margin: "0 auto", padding: 2 }}
-          >
-            Food List
-          </Typography>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={MEALS.breakFast + "-content"}
-              id={MEALS.breakFast}
-            >
-              <Typography>{MEALS.breakFast}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {foodData.map(
-                (item: FoodDataType) =>
-                  item.meals.includes(MEALS.breakFast) && (
-                    <Chip
-                      key={item.id}
-                      label={item.name}
-                      variant="outlined"
-                      sx={{ margin: 0.5 }}
-                      onClick={() => addFood(MEALS.breakFast, item)}
-                    />
-                  )
-              )}
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={MEALS.morningSnacks + "-content"}
-              id={MEALS.morningSnacks}
-            >
-              <Typography>{MEALS.morningSnacks}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {foodData.map(
-                (item: FoodDataType) =>
-                  item.meals.includes(MEALS.morningSnacks) && (
-                    <Typography key={item.id}>{item.name}</Typography>
-                  )
-              )}
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={MEALS.lunch + "-content"}
-              id={MEALS.lunch}
-            >
-              <Typography>{MEALS.lunch}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {foodData.map(
-                (item: FoodDataType) =>
-                  item.meals.includes(MEALS.lunch) && (
-                    <Typography key={item.id}>{item.name}</Typography>
-                  )
-              )}
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={MEALS.afternoonSnacks + "-content"}
-              id={MEALS.afternoonSnacks}
-            >
-              <Typography>{MEALS.afternoonSnacks}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {foodData.map(
-                (item: FoodDataType) =>
-                  item.meals.includes(MEALS.afternoonSnacks) && (
-                    <Typography key={item.id}>{item.name}</Typography>
-                  )
-              )}
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={MEALS.dinner + "-content"}
-              id={MEALS.dinner}
-            >
-              <Typography>{MEALS.dinner}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {foodData.map(
-                (item: FoodDataType) =>
-                  item.meals.includes(MEALS.dinner) && (
-                    <Typography key={item.id}>{item.name}</Typography>
-                  )
-              )}
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={MEALS.bedSnacks + "-content"}
-              id={MEALS.bedSnacks}
-            >
-              <Typography>{MEALS.bedSnacks}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {foodData.map(
-                (item: FoodDataType) =>
-                  item.meals.includes(MEALS.bedSnacks) && (
-                    <Typography key={item.id}>{item.name}</Typography>
-                  )
-              )}
-            </AccordionDetails>
-          </Accordion>
+          <FoodList
+            addFood={(meal: string, foodItem: FoodDataType) =>
+              addFood(meal, foodItem)
+            }
+          />
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography
