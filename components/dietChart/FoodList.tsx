@@ -10,6 +10,7 @@ import {
   Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { getRandomColor } from "../../utilities/helper";
 
 type FoodListPropsType = {
   addFood: (meal: string, foodItem: FoodDataType) => void;
@@ -42,6 +43,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.breakFast, item)}
+                  color={item.color}
                 />
               )
           )}

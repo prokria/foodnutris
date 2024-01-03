@@ -1,3 +1,5 @@
+import { ColorType, getRandomColor } from "./helper";
+
 export type FoodDataType = {
   meals: string[];
   id: number;
@@ -7,6 +9,7 @@ export type FoodDataType = {
   carbohydrate: number;
   fat: number;
   protein: number;
+  color: ColorType;
 };
 
 const foodData: FoodDataType[] = [
@@ -19,6 +22,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 14,
     fat: 18,
     protein: 19,
+    color: "info",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -29,6 +33,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 15,
     fat: 12,
     protein: 20,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner"],
@@ -39,6 +44,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 25,
     protein: 30,
+    color: "warning",
   },
   {
     meals: ["MorningSnacks", "Lunch", "Dinner"],
@@ -49,6 +55,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 28,
     fat: 24,
     protein: 22,
+    color: "info",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -59,6 +66,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 5,
     fat: 12,
     protein: 18,
+    color: "default",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -69,6 +77,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 7,
     protein: 24,
+    color: "info",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -79,6 +88,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 22,
     fat: 30,
     protein: 32,
+    color: "info",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -89,6 +99,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 5,
     fat: 7,
     protein: 16,
+    color: "warning",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -99,6 +110,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 35,
     fat: 40,
     protein: 35,
+    color: "warning",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -109,6 +121,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 14,
     fat: 10,
     protein: 22,
+    color: "secondary",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -119,6 +132,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 48,
     protein: 42,
+    color: "warning",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -129,6 +143,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 20,
     fat: 12,
     protein: 18,
+    color: "success",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -139,6 +154,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 12,
     fat: 8,
     protein: 19,
+    color: "error",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -149,6 +165,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 24,
     fat: 22,
     protein: 27,
+    color: "default",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -159,6 +176,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 25,
     protein: 25,
+    color: "secondary",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -169,6 +187,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 18,
     fat: 22,
     protein: 30,
+    color: "success",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -179,6 +198,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 15,
     protein: 18,
+    color: "default",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -189,6 +209,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 12,
     fat: 18,
     protein: 19,
+    color: "secondary",
   },
   {
     meals: ["MorningSnacks", "Lunch", "Dinner"],
@@ -199,6 +220,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 24,
     fat: 12,
     protein: 14,
+    color: "success",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -209,6 +231,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 13,
     protein: 20,
+    color: "secondary",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -219,6 +242,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0.5,
     fat: 1,
     protein: 23,
+    color: "success",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -229,6 +253,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 24,
     fat: 1,
     protein: 8,
+    color: "secondary",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -239,6 +264,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 35,
     fat: 1,
     protein: 8,
+    color: "default",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -249,6 +275,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 2,
     protein: 24,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner"],
@@ -259,6 +286,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0.6,
     fat: 6,
     protein: 7,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner"],
@@ -269,6 +297,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0.6,
     fat: 17,
     protein: 7,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner"],
@@ -279,6 +308,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0.6,
     fat: 6,
     protein: 7,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner"],
@@ -289,6 +319,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 3,
     fat: 12,
     protein: 7,
+    color: "primary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner", "BedSnacks"],
@@ -299,6 +330,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 5,
     fat: 8,
     protein: 3,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner", "BedSnacks"],
@@ -309,6 +341,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 4,
     fat: 4,
     protein: 8,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner", "BedSnacks"],
@@ -319,6 +352,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 5,
     fat: 2,
     protein: 8,
+    color: "error",
   },
   {
     meals: ["BreakFast", "MorningSnacks"],
@@ -329,6 +363,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 6,
     fat: 0,
     protein: 0,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks"],
@@ -339,6 +374,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 8,
     fat: 0,
     protein: 0,
+    color: "primary",
   },
   {
     meals: ["BreakFast", "MorningSnacks"],
@@ -349,6 +385,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 10,
     protein: 2,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -359,6 +396,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 8,
     protein: 0,
+    color: "warning",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -369,6 +407,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 10,
+    color: "success",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -379,6 +418,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 4,
     fat: 0,
     protein: 2,
+    color: "primary",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -389,6 +429,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 15,
     protein: 10,
+    color: "primary",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -399,6 +440,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 10,
     protein: 5,
+    color: "default",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -409,6 +451,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 45,
     fat: 20,
     protein: 15,
+    color: "info",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -419,6 +462,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 10,
     protein: 5,
+    color: "error",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -429,6 +473,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 9,
     fat: 1,
     protein: 3,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -439,6 +484,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 12,
     fat: 2,
     protein: 3,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -449,6 +495,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 1,
     protein: 2,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -459,6 +506,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 10,
     protein: 10,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -469,6 +517,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 10,
     protein: 10,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -479,6 +528,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 10,
     protein: 10,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -489,6 +539,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 0,
     protein: 6,
+    color: "error",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -499,6 +550,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 20,
     protein: 10,
+    color: "primary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -509,6 +561,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 10,
     protein: 10,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -519,6 +572,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 0,
     protein: 5,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -529,6 +583,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 12,
     fat: 7,
     protein: 2,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -539,6 +594,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 0,
     protein: 0,
+    color: "secondary",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -549,6 +605,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 15,
     fat: 0,
     protein: 0,
+    color: "error",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -559,6 +616,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 0,
     protein: 0,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -569,6 +627,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 10,
     protein: 10,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -579,6 +638,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 0,
     protein: 0,
+    color: "warning",
   },
   {
     meals: ["Lunch", "AfternoonSnacks"],
@@ -589,6 +649,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 15,
     fat: 5,
     protein: 5,
+    color: "info",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -599,6 +660,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 12,
     fat: 0,
     protein: 2,
+    color: "default",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -609,6 +671,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 1,
     fat: 0,
     protein: 0,
+    color: "error",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks", "Dinner"],
@@ -619,6 +682,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 60,
     fat: 10,
     protein: 5,
+    color: "success",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -629,6 +693,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 0,
     protein: 0,
+    color: "success",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -639,6 +704,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 0,
     protein: 0,
+    color: "primary",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -649,6 +715,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 100,
     fat: 40,
     protein: 15,
+    color: "primary",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -659,6 +726,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 1,
     fat: 1,
     protein: 4,
+    color: "secondary",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -669,6 +737,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 23,
     fat: 20,
     protein: 28,
+    color: "success",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -679,6 +748,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 45,
     fat: 35,
     protein: 18,
+    color: "info",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -689,6 +759,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 35,
     fat: 25,
     protein: 17,
+    color: "primary",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -699,6 +770,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 25,
     protein: 15,
+    color: "warning",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -709,6 +781,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 15,
     fat: 10,
     protein: 5,
+    color: "error",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -719,6 +792,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 35,
     protein: 25,
+    color: "info",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -729,6 +803,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 35,
     fat: 30,
     protein: 25,
+    color: "success",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -739,6 +814,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 20,
     protein: 15,
+    color: "info",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -749,6 +825,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 20,
     protein: 15,
+    color: "warning",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -759,6 +836,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 20,
     fat: 15,
     protein: 10,
+    color: "info",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -769,6 +847,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 20,
     fat: 10,
     protein: 10,
+    color: "default",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -779,6 +858,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 5,
     protein: 5,
+    color: "secondary",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -789,6 +869,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 35,
     protein: 25,
+    color: "error",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -799,6 +880,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 5,
     protein: 5,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -809,6 +891,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 5,
     protein: 5,
+    color: "default",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -819,6 +902,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 5,
     protein: 5,
+    color: "default",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -829,6 +913,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 30,
     fat: 10,
     protein: 15,
+    color: "warning",
   },
   {
     meals: ["Dinner"],
@@ -839,6 +924,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 45,
     fat: 15,
     protein: 15,
+    color: "success",
   },
   {
     meals: ["Dinner"],
@@ -849,6 +935,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 45,
     fat: 20,
     protein: 15,
+    color: "info",
   },
   {
     meals: ["Dinner"],
@@ -859,6 +946,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 10,
+    color: "default",
   },
   {
     meals: ["Dinner"],
@@ -869,6 +957,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 15,
     protein: 20,
+    color: "default",
   },
   {
     meals: ["Dinner"],
@@ -879,6 +968,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 0.5,
     protein: 3,
+    color: "success",
   },
   {
     meals: ["BreakFast", "Dinner"],
@@ -889,6 +979,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 7,
     protein: 7,
+    color: "secondary",
   },
   {
     meals: ["Dinner"],
@@ -899,6 +990,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 5,
     fat: 0.5,
     protein: 2,
+    color: "error",
   },
   {
     meals: ["Dinner"],
@@ -909,6 +1001,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 4,
     fat: 0.5,
     protein: 2,
+    color: "primary",
   },
   {
     meals: ["Dinner"],
@@ -919,6 +1012,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 4,
     protein: 12,
+    color: "primary",
   },
   {
     meals: ["Dinner"],
@@ -929,6 +1023,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 15,
     fat: 20,
     protein: 25,
+    color: "primary",
   },
   {
     meals: ["Dinner"],
@@ -939,6 +1034,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 5,
     protein: 5,
+    color: "secondary",
   },
   {
     meals: ["MorningSnacks", "Dinner"],
@@ -949,6 +1045,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 5,
     fat: 4,
     protein: 4,
+    color: "secondary",
   },
   {
     meals: ["Dinner"],
@@ -959,6 +1056,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 4,
     fat: 1,
     protein: 1,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -969,6 +1067,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 20,
     fat: 50,
     protein: 21,
+    color: "success",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -979,6 +1078,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 44,
     protein: 27,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -989,6 +1089,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 22,
     fat: 45,
     protein: 25,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -999,6 +1100,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 14,
     fat: 54,
     protein: 21,
+    color: "primary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1009,6 +1111,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 68,
     fat: 30,
     protein: 2,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1019,6 +1122,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 45,
     fat: 25,
     protein: 10,
+    color: "default",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1029,6 +1133,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 45,
     fat: 25,
     protein: 6,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1039,6 +1144,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 32,
     fat: 10,
     protein: 7,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1049,6 +1155,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 4,
     fat: 0,
     protein: 0,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1059,6 +1166,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 7,
     fat: 0,
     protein: 0,
+    color: "error",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1069,6 +1177,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 90,
     fat: 20,
     protein: 2,
+    color: "success",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1079,6 +1188,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 6,
     fat: 0,
     protein: 0,
+    color: "secondary",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1089,6 +1199,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 34,
     fat: 12,
     protein: 6,
+    color: "default",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1099,6 +1210,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 15,
     protein: 5,
+    color: "error",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1109,6 +1221,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 15,
     protein: 8,
+    color: "warning",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1119,6 +1232,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 6,
+    color: "error",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1129,6 +1243,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 8,
     protein: 0,
+    color: "secondary",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1139,6 +1254,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 5,
+    color: "error",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1149,6 +1265,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 20,
     fat: 5,
     protein: 2,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1159,6 +1276,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 5,
+    color: "info",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1169,6 +1287,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 10,
     protein: 5,
+    color: "default",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1179,6 +1298,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 5,
+    color: "secondary",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1189,6 +1309,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 20,
     protein: 5,
+    color: "primary",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1199,6 +1320,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 20,
     protein: 5,
+    color: "primary",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1209,6 +1331,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 5,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1219,6 +1342,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 50,
     fat: 20,
     protein: 5,
+    color: "secondary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1229,6 +1353,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 20,
     fat: 5,
     protein: 2,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1239,6 +1364,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 40,
     fat: 15,
     protein: 5,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1249,6 +1375,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 25,
     fat: 10,
     protein: 5,
+    color: "primary",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1259,6 +1386,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 10,
     protein: 0,
+    color: "info",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1269,6 +1397,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 4,
     protein: 0,
+    color: "warning",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1279,6 +1408,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 8,
     protein: 3,
+    color: "info",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1289,6 +1419,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 4,
     fat: 1,
     protein: 0,
+    color: "error",
   },
   {
     meals: [],
@@ -1299,6 +1430,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 12,
     protein: 0,
+    color: "warning",
   },
   {
     meals: [],
@@ -1309,6 +1441,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 12,
     protein: 0,
+    color: "default",
   },
   {
     meals: [],
@@ -1319,6 +1452,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 12,
     protein: 0,
+    color: "info",
   },
   {
     meals: [],
@@ -1329,6 +1463,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 12,
     protein: 0,
+    color: "default",
   },
   {
     meals: [],
@@ -1339,6 +1474,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 11,
     protein: 0,
+    color: "secondary",
   },
   {
     meals: [],
@@ -1349,6 +1485,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 10,
     protein: 0,
+    color: "primary",
   },
   {
     meals: [],
@@ -1359,6 +1496,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 12,
     protein: 0,
+    color: "info",
   },
   {
     meals: [],
@@ -1369,6 +1507,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 0,
     fat: 12,
     protein: 0,
+    color: "primary",
   },
   {
     meals: ["Dinner"],
@@ -1379,6 +1518,7 @@ const foodData: FoodDataType[] = [
     carbohydrate: 10,
     fat: 15,
     protein: 15,
+    color: "warning",
   },
 ];
 
