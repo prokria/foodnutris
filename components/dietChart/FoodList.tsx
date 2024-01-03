@@ -1,8 +1,6 @@
 import foodData, { FoodDataType } from "../../utilities/foods";
 import { MEALS } from "../../utilities/constants";
 import {
-  Grid,
-  Container,
   Typography,
   Accordion,
   AccordionSummary,
@@ -10,7 +8,6 @@ import {
   Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { getRandomColor } from "../../utilities/helper";
 
 type FoodListPropsType = {
   addFood: (meal: string, foodItem: FoodDataType) => void;

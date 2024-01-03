@@ -8,7 +8,6 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { MEALS } from "../../utilities/constants";
 import { FoodDataType } from "../../utilities/foods";
-import { getRandomColor } from "../../utilities/helper";
 type SelectedFoodPropsType = {
   breakfast: FoodDataType[];
   msnacks: FoodDataType[];

@@ -1,17 +1,9 @@
 import { useState } from "react";
 import type { NextPage } from "next";
-import {
-  Grid,
-  Container,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Chip,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Grid, Container } from "@mui/material";
 import foodData, { FoodDataType } from "../../utilities/foods";
 import { MEALS } from "../../utilities/constants";
+import { isItemExists } from "../../utilities/helper";
 import FoodList from "../../components/dietChart/FoodList";
 import SelectedFood from "../../components/dietChart/SelectedFood";
 
@@ -27,21 +19,34 @@ const DietChart: NextPage = () => {
   const addFood = (meal: string, foodItem: FoodDataType) => {
     switch (meal) {
       case MEALS.breakFast:
-        setBreakfast((prevArray) => [...prevArray, foodItem]);
+        if (!isItemExists(breakfast, foodItem.id)) {
+          setBreakfast((prevArray) => [...prevArray, foodItem]);
+        }
         break;
       case MEALS.morningSnacks:
-        setMsnacks((prevArray) => [...prevArray, foodItem]);
+        if (!isItemExists(msnacks, foodItem.id)) {
+          setMsnacks((prevArray) => [...prevArray, foodItem]);
+        }
+        break;
       case MEALS.lunch:
-        setLunch((prevArray) => [...prevArray, foodItem]);
+        if (!isItemExists(lunch, foodItem.id)) {
+          setLunch((prevArray) => [...prevArray, foodItem]);
+        }
         break;
       case MEALS.afternoonSnacks:
-        setLunch((prevArray) => [...prevArray, foodItem]);
+        if (!isItemExists(asnacks, foodItem.id)) {
+          setAsnacks((prevArray) => [...prevArray, foodItem]);
+        }
         break;
       case MEALS.bedSnacks:
-        setLunch((prevArray) => [...prevArray, foodItem]);
+        if (!isItemExists(bsnacks, foodItem.id)) {
+          setBsnacks((prevArray) => [...prevArray, foodItem]);
+        }
         break;
       default:
-        setDinner((prevArray) => [...prevArray, foodItem]);
+        if (!isItemExists(dinner, foodItem.id)) {
+          setDinner((prevArray) => [...prevArray, foodItem]);
+        }
     }
   };
 
@@ -96,3 +101,6 @@ const DietChart: NextPage = () => {
   );
 };
 export default DietChart;
+function isExists() {
+  throw new Error("Function not implemented.");
+}

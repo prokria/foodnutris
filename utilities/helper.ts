@@ -1,3 +1,5 @@
+import { FoodDataType } from "./foods";
+
 export type ColorType =
   | "default"
   | "primary"
@@ -20,4 +22,8 @@ export function getRandomColor(): ColorType {
 
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
+}
+
+export function isItemExists(arr: FoodDataType[], idToCheck: number): boolean {
+  return arr.some((obj) => obj.id === idToCheck);
 }
