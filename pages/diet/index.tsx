@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
-import { Grid, Container } from "@mui/material";
-import foodData, { FoodDataType } from "../../utilities/foods";
+import { Grid, Container, Divider } from "@mui/material";
+import { FoodDataType } from "../../utilities/foods";
 import { MEALS } from "../../utilities/constants";
 import { isItemExists } from "../../utilities/helper";
 import FoodList from "../../components/dietChart/FoodList";
@@ -76,14 +76,17 @@ const DietChart: NextPage = () => {
   return (
     <Container sx={{ py: 3 }}>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={12}>
           <FoodList
             addFood={(meal: string, foodItem: FoodDataType) =>
               addFood(meal, foodItem)
             }
           />
+          <Divider light />
         </Grid>
-        <Grid item xs={12} md={6}>
+      </Grid>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={4}>
           <SelectedFood
             breakfast={breakfast}
             asnacks={asnacks}
@@ -96,9 +99,7 @@ const DietChart: NextPage = () => {
             }
           />
         </Grid>
-      </Grid>
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={8}>
           <DietCalculation
             breakfast={breakfast}
             asnacks={asnacks}

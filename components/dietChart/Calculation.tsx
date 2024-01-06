@@ -128,8 +128,8 @@ export default function DietCalculation({
   return (
     <>
       <Typography
-        variant="h4"
-        component="h4"
+        variant="h6"
+        component="h6"
         sx={{ marginTop: 5, padding: 2, textAlign: "center" }}
       >
         Calculations
@@ -226,12 +226,36 @@ export default function DietCalculation({
             <TableRow
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell>Total</TableCell>
-              <TableCell align="right">{totalValue("calorie")}</TableCell>
-              <TableCell align="right">{totalValue("fat")}</TableCell>
-              <TableCell align="right">{totalValue("carbohydrate")}</TableCell>
-              <TableCell align="right">{totalValue("protein")}</TableCell>
-              <TableCell align="right">{totalValue("fiber")}</TableCell>
+              <TableCell>
+                <Typography variant="body1" fontWeight="bold">
+                  Total
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body1" fontWeight="bold">
+                  {totalValue("calorie")}
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body1" fontWeight="bold">
+                  {totalValue("fat")}
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body1" fontWeight="bold">
+                  {totalValue("carbohydrate")}
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body1" fontWeight="bold">
+                  {totalValue("protein")}
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body1" fontWeight="bold">
+                  {totalValue("fiber")}
+                </Typography>
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>

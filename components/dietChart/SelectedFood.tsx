@@ -31,7 +31,7 @@ export default function SelectedFood({
       <Typography
         variant="h6"
         component="h6"
-        sx={{ textAlign: "center", padding: 2 }}
+        sx={{ marginTop: 5, textAlign: "center", padding: 2 }}
       >
         Diet Chart
       </Typography>
