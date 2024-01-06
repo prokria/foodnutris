@@ -35,7 +35,7 @@ export default function DietCalculation({
     }
     const total = mealItems.reduce((accumulator, currentValue) => {
       if (currentValue.hasOwnProperty(identifier)) {
-        const value = currentValue[identifier];
+        const value = currentValue[identifier] * currentValue.serve;
         if (!isNaN(value)) {
           return accumulator + value;
         }
@@ -52,7 +52,7 @@ export default function DietCalculation({
     if (breakfast.length) {
       bfTotal = breakfast.reduce((accumulator, currentValue) => {
         if (currentValue.hasOwnProperty(identifier)) {
-          const value = currentValue[identifier];
+          const value = currentValue[identifier] * currentValue.serve;
           if (!isNaN(value)) {
             return accumulator + value;
           }
@@ -64,7 +64,7 @@ export default function DietCalculation({
     if (msnacks.length) {
       msTotal = msnacks.reduce((accumulator, currentValue) => {
         if (currentValue.hasOwnProperty(identifier)) {
-          const value = currentValue[identifier];
+          const value = currentValue[identifier] * currentValue.serve;
           if (!isNaN(value)) {
             return accumulator + value;
           }
@@ -76,7 +76,7 @@ export default function DietCalculation({
     if (lunch.length) {
       lnTotal = lunch.reduce((accumulator, currentValue) => {
         if (currentValue.hasOwnProperty(identifier)) {
-          const value = currentValue[identifier];
+          const value = currentValue[identifier] * currentValue.serve;
           if (!isNaN(value)) {
             return accumulator + value;
           }
@@ -88,7 +88,7 @@ export default function DietCalculation({
     if (asnacks.length) {
       asTotal = asnacks.reduce((accumulator, currentValue) => {
         if (currentValue.hasOwnProperty(identifier)) {
-          const value = currentValue[identifier];
+          const value = currentValue[identifier] * currentValue.serve;
           if (!isNaN(value)) {
             return accumulator + value;
           }
@@ -101,7 +101,7 @@ export default function DietCalculation({
     if (dinner.length) {
       dnTotal = dinner.reduce((accumulator, currentValue) => {
         if (currentValue.hasOwnProperty(identifier)) {
-          const value = currentValue[identifier];
+          const value = currentValue[identifier] * currentValue.serve;
           if (!isNaN(value)) {
             return accumulator + value;
           }
@@ -114,7 +114,7 @@ export default function DietCalculation({
     if (bsnacks.length) {
       bsTotal = bsnacks.reduce((accumulator, currentValue) => {
         if (currentValue.hasOwnProperty(identifier)) {
-          const value = currentValue[identifier];
+          const value = currentValue[identifier] * currentValue.serve;
           if (!isNaN(value)) {
             return accumulator + value;
           }

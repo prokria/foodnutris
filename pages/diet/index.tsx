@@ -73,6 +73,69 @@ const DietChart: NextPage = () => {
     }
   };
 
+  const updateFoodServe = (meal: string, foodId: number, serve: number) => {
+    switch (meal) {
+      case MEALS.breakFast:
+        let breakfastUpdate = [...breakfast];
+        breakfastUpdate = breakfastUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setBreakfast(breakfastUpdate);
+        break;
+      case MEALS.morningSnacks:
+        let msnacksUpdate = [...msnacks];
+        msnacksUpdate = msnacksUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setMsnacks(msnacksUpdate);
+      case MEALS.lunch:
+        let lunchUpdate = [...lunch];
+        lunchUpdate = lunchUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setLunch(lunchUpdate);
+        break;
+      case MEALS.afternoonSnacks:
+        let asnacksUpdate = [...asnacks];
+        asnacksUpdate = asnacksUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setAsnacks(asnacksUpdate);
+        break;
+      case MEALS.bedSnacks:
+        let bsnacksUpdate = [...bsnacks];
+        bsnacksUpdate = bsnacksUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setBsnacks(bsnacksUpdate);
+        break;
+      default:
+        let dinnerUpdate = [...dinner];
+        dinnerUpdate = dinnerUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setDinner(dinnerUpdate);
+    }
+  };
+
   return (
     <Container sx={{ py: 3 }}>
       <Grid container spacing={4}>
@@ -96,6 +159,9 @@ const DietChart: NextPage = () => {
             bsnacks={bsnacks}
             removeFood={(meal: string, foodId: number) =>
               removeFood(meal, foodId)
+            }
+            updateFoodServe={(meal: string, foodId: number, serve: number) =>
+              updateFoodServe(meal, foodId, serve)
             }
           />
         </Grid>
