@@ -28,12 +28,15 @@ const DietChart: NextPage = () => {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
+                <TableCell>SL</TableCell>
                 <TableCell>Food (100g serving)</TableCell>
                 <TableCell align="right">Calories</TableCell>
                 <TableCell align="right">Fat&nbsp;(g)</TableCell>
                 <TableCell align="right">Carbs&nbsp;(g)</TableCell>
                 <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                <TableCell align="right">Fiber</TableCell>
                 <TableCell align="right">Meals</TableCell>
+                <TableCell align="right">Serving</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -42,6 +45,7 @@ const DietChart: NextPage = () => {
                   key={row.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
+                  <TableCell align="right">{row.id}</TableCell>
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
@@ -49,7 +53,11 @@ const DietChart: NextPage = () => {
                   <TableCell align="right">{row.fat}</TableCell>
                   <TableCell align="right">{row.carbohydrate}</TableCell>
                   <TableCell align="right">{row.protein}</TableCell>
+                  <TableCell align="right">{row.fiber}</TableCell>
                   <TableCell align="right">{row.meals?.join(", ")}</TableCell>
+                  <TableCell align="right">
+                    {row.size} {row.unit}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

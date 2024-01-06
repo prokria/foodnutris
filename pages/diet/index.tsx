@@ -8,7 +8,6 @@ import FoodList from "../../components/dietChart/FoodList";
 import SelectedFood from "../../components/dietChart/SelectedFood";
 
 const DietChart: NextPage = () => {
-  console.log(foodData);
   const [breakfast, setBreakfast] = useState<FoodDataType[]>([]);
   const [msnacks, setMsnacks] = useState<FoodDataType[]>([]);
   const [asnacks, setAsnacks] = useState<FoodDataType[]>([]);

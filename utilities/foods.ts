@@ -28,7 +28,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -42,7 +42,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner"],
@@ -56,7 +56,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "Dinner"],
@@ -70,7 +70,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -84,7 +84,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -98,7 +98,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 20,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -112,7 +112,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -126,7 +126,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -140,7 +140,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -154,7 +154,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -168,7 +168,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 20,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -182,7 +182,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 20,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -196,7 +196,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 20,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -210,7 +210,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 20,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -224,7 +224,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 100,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -238,7 +238,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -252,7 +252,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -266,7 +266,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "Dinner"],
@@ -280,7 +280,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -294,7 +294,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -308,7 +308,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 100,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -322,7 +322,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "secondary",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -336,7 +336,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "default",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -350,7 +350,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "warning",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner"],
@@ -364,7 +364,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner"],
@@ -378,7 +378,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner"],
@@ -392,7 +392,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner"],
@@ -406,7 +406,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "BedSnacks"],
@@ -420,7 +420,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 250,
-    unit: "ML",
+    unit: "ml",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner", "BedSnacks"],
@@ -434,7 +434,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 250,
-    unit: "ML",
+    unit: "ml",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Dinner", "BedSnacks"],
@@ -448,7 +448,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 250,
-    unit: "ML",
+    unit: "ml",
   },
   {
     meals: ["BreakFast", "MorningSnacks"],
@@ -462,7 +462,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks"],
@@ -476,7 +476,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks"],
@@ -490,7 +490,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -504,7 +504,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -518,7 +518,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -532,7 +532,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -546,7 +546,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -560,7 +560,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -574,7 +574,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -588,7 +588,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -602,7 +602,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -616,7 +616,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -630,7 +630,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -644,7 +644,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -658,7 +658,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -672,7 +672,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -686,7 +686,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -700,7 +700,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -714,7 +714,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -728,7 +728,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -742,7 +742,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -756,7 +756,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -770,7 +770,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -784,7 +784,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -798,7 +798,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -812,7 +812,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "AfternoonSnacks"],
@@ -826,7 +826,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -840,7 +840,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -854,7 +854,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks", "Dinner"],
@@ -868,7 +868,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -882,7 +882,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -896,7 +896,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -910,7 +910,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -924,7 +924,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -938,7 +938,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -952,7 +952,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -966,7 +966,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -980,7 +980,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -994,7 +994,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1008,7 +1008,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1022,7 +1022,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1036,7 +1036,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1050,7 +1050,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1064,7 +1064,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1078,7 +1078,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1092,7 +1092,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1106,7 +1106,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -1120,7 +1120,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -1134,7 +1134,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "AfternoonSnacks"],
@@ -1148,7 +1148,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["AfternoonSnacks"],
@@ -1162,7 +1162,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1176,7 +1176,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1190,7 +1190,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1204,7 +1204,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1218,7 +1218,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1232,7 +1232,7 @@ const foodData: FoodDataType[] = [
     fiber: 0.2,
     color: "success",
     size: 100,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "Dinner"],
@@ -1246,7 +1246,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1260,7 +1260,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1274,7 +1274,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1288,7 +1288,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1302,7 +1302,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1316,7 +1316,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Dinner"],
@@ -1330,7 +1330,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1344,7 +1344,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1358,7 +1358,7 @@ const foodData: FoodDataType[] = [
     fiber: 2,
     color: "success",
     size: 5,
-    unit: "Pieces",
+    unit: "pcs",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1372,7 +1372,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "default",
     size: 5,
-    unit: "Pieces",
+    unit: "pcs",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1386,7 +1386,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "warning",
     size: 5,
-    unit: "Pieces",
+    unit: "pcs",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1400,7 +1400,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "primary",
     size: 5,
-    unit: "Pieces",
+    unit: "pcs",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1414,7 +1414,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "default",
     size: 5,
-    unit: "Pieces",
+    unit: "pcs",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1428,7 +1428,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1442,7 +1442,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1456,7 +1456,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1470,7 +1470,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1484,7 +1484,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1498,7 +1498,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1512,7 +1512,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1526,7 +1526,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1540,7 +1540,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1554,7 +1554,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1568,7 +1568,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1582,7 +1582,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1596,7 +1596,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1610,7 +1610,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1624,7 +1624,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1638,7 +1638,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1652,7 +1652,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1666,7 +1666,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1680,7 +1680,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1694,7 +1694,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1708,7 +1708,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1722,7 +1722,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1736,7 +1736,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "Lunch", "AfternoonSnacks"],
@@ -1750,7 +1750,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1764,7 +1764,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1778,7 +1778,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
@@ -1792,7 +1792,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["MorningSnacks", "AfternoonSnacks"],
@@ -1806,7 +1806,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1820,7 +1820,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1834,7 +1834,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1848,7 +1848,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1862,7 +1862,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "default",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1876,7 +1876,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1890,7 +1890,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1904,7 +1904,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [],
@@ -1918,7 +1918,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Dinner"],
@@ -1932,7 +1932,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
@@ -1946,7 +1946,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "warning",
     size: 2,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: [
@@ -2006,7 +2006,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: [
@@ -2026,7 +2026,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2046,7 +2046,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 25,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2126,7 +2126,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 1,
-    unit: "Piece",
+    unit: "pc",
   },
   {
     meals: [
@@ -2146,7 +2146,7 @@ const foodData: FoodDataType[] = [
     fiber: 4,
     color: "info",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2166,7 +2166,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2186,7 +2186,7 @@ const foodData: FoodDataType[] = [
     fiber: 4,
     color: "info",
     size: 50,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2206,7 +2206,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 160,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2226,7 +2226,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 156,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2266,7 +2266,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 60,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: [
@@ -2286,7 +2286,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 135,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
@@ -2300,7 +2300,7 @@ const foodData: FoodDataType[] = [
     fiber: 0.2,
     color: "info",
     size: 100,
-    unit: "Gram",
+    unit: "g",
   },
   {
     meals: ["Lunch", "Dinner"],
