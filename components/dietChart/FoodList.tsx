@@ -18,7 +18,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
       <Typography
         variant="h6"
         component="h6"
-        sx={{ margin: "0 auto", padding: 2 }}
+        sx={{ textAlign: "center", padding: 2 }}
       >
         Food List
       </Typography>

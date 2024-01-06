@@ -6,6 +6,7 @@ import { MEALS } from "../../utilities/constants";
 import { isItemExists } from "../../utilities/helper";
 import FoodList from "../../components/dietChart/FoodList";
 import SelectedFood from "../../components/dietChart/SelectedFood";
+import DietCalculation from "../../components/dietChart/Calculation";
 
 const DietChart: NextPage = () => {
   const [breakfast, setBreakfast] = useState<FoodDataType[]>([]);
@@ -93,6 +94,18 @@ const DietChart: NextPage = () => {
             removeFood={(meal: string, foodId: number) =>
               removeFood(meal, foodId)
             }
+          />
+        </Grid>
+      </Grid>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={12}>
+          <DietCalculation
+            breakfast={breakfast}
+            asnacks={asnacks}
+            lunch={lunch}
+            msnacks={msnacks}
+            dinner={dinner}
+            bsnacks={bsnacks}
           />
         </Grid>
       </Grid>
