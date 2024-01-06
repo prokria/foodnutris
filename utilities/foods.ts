@@ -1,4 +1,4 @@
-import { ColorType, getRandomColor } from "./helper";
+import { ColorType } from "./helper";
 
 export type FoodDataType = {
   meals: string[];
@@ -12,6 +12,7 @@ export type FoodDataType = {
   fiber: number;
   color: ColorType;
   size: number;
+  serve: number;
   unit: string;
 };
 
@@ -28,6 +29,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -40,8 +42,9 @@ const foodData: FoodDataType[] = [
     fat: 12,
     protein: 20,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -56,6 +59,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -70,6 +74,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -82,8 +87,9 @@ const foodData: FoodDataType[] = [
     fat: 12,
     protein: 18,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -98,6 +104,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 20,
+    serve: 1,
     unit: "g",
   },
   {
@@ -112,6 +119,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -126,6 +134,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -140,6 +149,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -154,6 +164,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -168,6 +179,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 20,
+    serve: 1,
     unit: "g",
   },
   {
@@ -182,6 +194,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 20,
+    serve: 1,
     unit: "g",
   },
   {
@@ -196,6 +209,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 20,
+    serve: 1,
     unit: "g",
   },
   {
@@ -208,8 +222,9 @@ const foodData: FoodDataType[] = [
     fat: 22,
     protein: 27,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 20,
+    serve: 1,
     unit: "g",
   },
   {
@@ -224,6 +239,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 100,
+    serve: 1,
     unit: "g",
   },
   {
@@ -238,6 +254,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -250,8 +267,9 @@ const foodData: FoodDataType[] = [
     fat: 15,
     protein: 18,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -266,6 +284,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -280,6 +299,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -294,6 +314,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -308,6 +329,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 100,
+    serve: 1,
     unit: "g",
   },
   {
@@ -322,6 +344,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "secondary",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -334,8 +357,9 @@ const foodData: FoodDataType[] = [
     fat: 1,
     protein: 8,
     fiber: 6,
-    color: "default",
+    color: "secondary",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -350,6 +374,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "warning",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -364,6 +389,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -378,6 +404,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -390,8 +417,9 @@ const foodData: FoodDataType[] = [
     fat: 6,
     protein: 7,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -406,6 +434,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -420,6 +449,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 250,
+    serve: 1,
     unit: "ml",
   },
   {
@@ -434,6 +464,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 250,
+    serve: 1,
     unit: "ml",
   },
   {
@@ -448,6 +479,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 250,
+    serve: 1,
     unit: "ml",
   },
   {
@@ -462,6 +494,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -476,6 +509,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -490,6 +524,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -504,6 +539,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -518,6 +554,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -532,6 +569,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -546,6 +584,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -558,8 +597,9 @@ const foodData: FoodDataType[] = [
     fat: 10,
     protein: 5,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -574,6 +614,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -588,6 +629,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -602,6 +644,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -616,6 +659,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -628,8 +672,9 @@ const foodData: FoodDataType[] = [
     fat: 1,
     protein: 2,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -642,8 +687,9 @@ const foodData: FoodDataType[] = [
     fat: 10,
     protein: 10,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -656,8 +702,9 @@ const foodData: FoodDataType[] = [
     fat: 10,
     protein: 10,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -672,6 +719,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -686,6 +734,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -700,6 +749,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -714,6 +764,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -728,6 +779,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -742,6 +794,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -756,6 +809,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -770,6 +824,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -784,6 +839,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -796,8 +852,9 @@ const foodData: FoodDataType[] = [
     fat: 10,
     protein: 10,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -812,6 +869,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -826,6 +884,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -838,8 +897,9 @@ const foodData: FoodDataType[] = [
     fat: 0,
     protein: 2,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -854,6 +914,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -868,6 +929,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -882,6 +944,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -896,6 +959,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -910,6 +974,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -924,6 +989,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -938,6 +1004,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -952,6 +1019,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -966,6 +1034,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -980,6 +1049,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -994,6 +1064,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1008,6 +1079,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1022,6 +1094,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1036,6 +1109,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1050,6 +1124,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1064,6 +1139,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1076,8 +1152,9 @@ const foodData: FoodDataType[] = [
     fat: 10,
     protein: 10,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1092,6 +1169,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1106,6 +1184,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1120,6 +1199,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1132,8 +1212,9 @@ const foodData: FoodDataType[] = [
     fat: 5,
     protein: 5,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1146,8 +1227,9 @@ const foodData: FoodDataType[] = [
     fat: 5,
     protein: 5,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1162,6 +1244,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1176,6 +1259,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1190,6 +1274,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1202,8 +1287,9 @@ const foodData: FoodDataType[] = [
     fat: 15,
     protein: 10,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1216,8 +1302,9 @@ const foodData: FoodDataType[] = [
     fat: 15,
     protein: 20,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1232,6 +1319,7 @@ const foodData: FoodDataType[] = [
     fiber: 0.2,
     color: "success",
     size: 100,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1246,6 +1334,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1260,6 +1349,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1274,6 +1364,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1288,6 +1379,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1302,6 +1394,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1316,6 +1409,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1330,6 +1424,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1342,8 +1437,9 @@ const foodData: FoodDataType[] = [
     fat: 1,
     protein: 1,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1358,6 +1454,7 @@ const foodData: FoodDataType[] = [
     fiber: 2,
     color: "success",
     size: 5,
+    serve: 1,
     unit: "pcs",
   },
   {
@@ -1370,8 +1467,9 @@ const foodData: FoodDataType[] = [
     fat: 44,
     protein: 27,
     fiber: 1,
-    color: "default",
+    color: "secondary",
     size: 5,
+    serve: 1,
     unit: "pcs",
   },
   {
@@ -1386,6 +1484,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "warning",
     size: 5,
+    serve: 1,
     unit: "pcs",
   },
   {
@@ -1400,6 +1499,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "primary",
     size: 5,
+    serve: 1,
     unit: "pcs",
   },
   {
@@ -1412,8 +1512,9 @@ const foodData: FoodDataType[] = [
     fat: 30,
     protein: 2,
     fiber: 1,
-    color: "default",
+    color: "secondary",
     size: 5,
+    serve: 1,
     unit: "pcs",
   },
   {
@@ -1426,8 +1527,9 @@ const foodData: FoodDataType[] = [
     fat: 25,
     protein: 10,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1442,6 +1544,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1456,6 +1559,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1470,6 +1574,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1484,6 +1589,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1498,6 +1604,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1512,6 +1619,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1524,8 +1632,9 @@ const foodData: FoodDataType[] = [
     fat: 12,
     protein: 6,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1540,6 +1649,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1554,6 +1664,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1568,6 +1679,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1582,6 +1694,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1596,6 +1709,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1610,6 +1724,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1624,6 +1739,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1636,8 +1752,9 @@ const foodData: FoodDataType[] = [
     fat: 10,
     protein: 5,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1652,6 +1769,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1666,6 +1784,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1680,6 +1799,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1694,6 +1814,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1708,6 +1829,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1722,6 +1844,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1736,6 +1859,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1750,6 +1874,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1764,6 +1889,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1778,6 +1904,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1792,6 +1919,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1806,6 +1934,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "error",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1820,6 +1949,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1832,8 +1962,9 @@ const foodData: FoodDataType[] = [
     fat: 12,
     protein: 0,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1848,6 +1979,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1860,8 +1992,9 @@ const foodData: FoodDataType[] = [
     fat: 12,
     protein: 0,
     fiber: 0,
-    color: "default",
+    color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1876,6 +2009,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "secondary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1890,6 +2024,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1904,6 +2039,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1918,6 +2054,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "primary",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1932,6 +2069,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 30,
+    serve: 1,
     unit: "g",
   },
   {
@@ -1946,6 +2084,7 @@ const foodData: FoodDataType[] = [
     fiber: 1,
     color: "warning",
     size: 2,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -1966,6 +2105,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 1,
+    serve: 1,
     unit: "Medium",
   },
   {
@@ -1986,6 +2126,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 1,
+    serve: 1,
     unit: "Medium",
   },
   {
@@ -2006,6 +2147,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "success",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -2026,6 +2168,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "warning",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2046,6 +2189,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 25,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2066,6 +2210,7 @@ const foodData: FoodDataType[] = [
     fiber: 8,
     color: "info",
     size: 1,
+    serve: 1,
     unit: "Cup",
   },
   {
@@ -2086,6 +2231,7 @@ const foodData: FoodDataType[] = [
     fiber: 10,
     color: "info",
     size: 1,
+    serve: 1,
     unit: "Cup",
   },
   {
@@ -2106,6 +2252,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 2,
+    serve: 1,
     unit: "Small",
   },
   {
@@ -2126,6 +2273,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 1,
+    serve: 1,
     unit: "pc",
   },
   {
@@ -2146,6 +2294,7 @@ const foodData: FoodDataType[] = [
     fiber: 4,
     color: "info",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2166,6 +2315,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2186,6 +2336,7 @@ const foodData: FoodDataType[] = [
     fiber: 4,
     color: "info",
     size: 50,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2206,6 +2357,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 160,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2226,6 +2378,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 156,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2246,6 +2399,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 1,
+    serve: 1,
     unit: "Cup",
   },
   {
@@ -2266,6 +2420,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 60,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2286,6 +2441,7 @@ const foodData: FoodDataType[] = [
     fiber: 0,
     color: "info",
     size: 135,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2300,6 +2456,7 @@ const foodData: FoodDataType[] = [
     fiber: 0.2,
     color: "info",
     size: 100,
+    serve: 1,
     unit: "g",
   },
   {
@@ -2314,6 +2471,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "info",
     size: 0.5,
+    serve: 1,
     unit: "Cup",
   },
   {
@@ -2328,6 +2486,7 @@ const foodData: FoodDataType[] = [
     fiber: 6,
     color: "info",
     size: 0.5,
+    serve: 1,
     unit: "Cup",
   },
 ];

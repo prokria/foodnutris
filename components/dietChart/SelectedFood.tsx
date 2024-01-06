@@ -8,6 +8,8 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { MEALS } from "../../utilities/constants";
 import { FoodDataType } from "../../utilities/foods";
+import ChartFoodItem from "./ChartFoodItem";
+
 type SelectedFoodPropsType = {
   breakfast: FoodDataType[];
   msnacks: FoodDataType[];
@@ -16,9 +18,11 @@ type SelectedFoodPropsType = {
   bsnacks: FoodDataType[];
   dinner: FoodDataType[];
   removeFood: (meal: string, foodId: number) => void;
+  updateFoodServe: (meal: string, foodId: number, serve: number) => void;
 };
 export default function SelectedFood({
   removeFood,
+  updateFoodServe,
   breakfast,
   msnacks,
   lunch,
@@ -31,7 +35,7 @@ export default function SelectedFood({
       <Typography
         variant="h6"
         component="h6"
-        sx={{ textAlign: "center", padding: 2 }}
+        sx={{ marginTop: 5, textAlign: "center", padding: 2 }}
       >
         Diet Chart
       </Typography>
@@ -46,14 +50,15 @@ export default function SelectedFood({
         <AccordionDetails>
           {breakfast &&
             breakfast.map((item: FoodDataType) => (
-              <Chip
+              <ChartFoodItem
                 key={item.id}
-                label={item.name}
-                variant="outlined"
-                // onClick={() => removeFood(MEALS.breakFast, item.id)}
-                onDelete={() => removeFood(MEALS.breakFast, item.id)}
-                sx={{ margin: 0.5 }}
-                color={item.color}
+                food={item}
+                removeFood={(foodId: number) =>
+                  removeFood(MEALS.breakFast, foodId)
+                }
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.breakFast, foodId, serve)
+                }
               />
             ))}
         </AccordionDetails>
@@ -69,13 +74,15 @@ export default function SelectedFood({
         <AccordionDetails>
           {msnacks &&
             msnacks.map((item: FoodDataType) => (
-              <Chip
+              <ChartFoodItem
                 key={item.id}
-                label={item.name}
-                variant="outlined"
-                onDelete={() => removeFood(MEALS.morningSnacks, item.id)}
-                sx={{ margin: 0.5 }}
-                color={item.color}
+                food={item}
+                removeFood={(foodId: number) =>
+                  removeFood(MEALS.morningSnacks, foodId)
+                }
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.morningSnacks, foodId, serve)
+                }
               />
             ))}
         </AccordionDetails>
@@ -91,13 +98,13 @@ export default function SelectedFood({
         <AccordionDetails>
           {lunch &&
             lunch.map((item: FoodDataType) => (
-              <Chip
+              <ChartFoodItem
                 key={item.id}
-                label={item.name}
-                variant="outlined"
-                onDelete={() => removeFood(MEALS.lunch, item.id)}
-                sx={{ margin: 0.5 }}
-                color={item.color}
+                food={item}
+                removeFood={(foodId: number) => removeFood(MEALS.lunch, foodId)}
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.lunch, foodId, serve)
+                }
               />
             ))}
         </AccordionDetails>
@@ -113,13 +120,15 @@ export default function SelectedFood({
         <AccordionDetails>
           {asnacks &&
             asnacks.map((item: FoodDataType) => (
-              <Chip
+              <ChartFoodItem
                 key={item.id}
-                label={item.name}
-                variant="outlined"
-                onDelete={() => removeFood(MEALS.afternoonSnacks, item.id)}
-                sx={{ margin: 0.5 }}
-                color={item.color}
+                food={item}
+                removeFood={(foodId: number) =>
+                  removeFood(MEALS.afternoonSnacks, foodId)
+                }
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.afternoonSnacks, foodId, serve)
+                }
               />
             ))}
         </AccordionDetails>
@@ -135,13 +144,15 @@ export default function SelectedFood({
         <AccordionDetails>
           {dinner &&
             dinner.map((item: FoodDataType) => (
-              <Chip
+              <ChartFoodItem
                 key={item.id}
-                label={item.name}
-                variant="outlined"
-                onDelete={() => removeFood(MEALS.dinner, item.id)}
-                sx={{ margin: 0.5 }}
-                color={item.color}
+                food={item}
+                removeFood={(foodId: number) =>
+                  removeFood(MEALS.dinner, foodId)
+                }
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.dinner, foodId, serve)
+                }
               />
             ))}
         </AccordionDetails>
@@ -157,13 +168,15 @@ export default function SelectedFood({
         <AccordionDetails>
           {bsnacks &&
             bsnacks.map((item: FoodDataType) => (
-              <Chip
+              <ChartFoodItem
                 key={item.id}
-                label={item.name}
-                variant="outlined"
-                onDelete={() => removeFood(MEALS.bedSnacks, item.id)}
-                sx={{ margin: 0.5 }}
-                color={item.color}
+                food={item}
+                removeFood={(foodId: number) =>
+                  removeFood(MEALS.bedSnacks, foodId)
+                }
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.bedSnacks, foodId, serve)
+                }
               />
             ))}
         </AccordionDetails>

@@ -1,7 +1,6 @@
 import { FoodDataType } from "./foods";
 
 export type ColorType =
-  | "default"
   | "primary"
   | "secondary"
   | "error"
@@ -11,7 +10,6 @@ export type ColorType =
 
 export function getRandomColor(): ColorType {
   const colors: ColorType[] = [
-    "default",
     "primary",
     "secondary",
     "error",
