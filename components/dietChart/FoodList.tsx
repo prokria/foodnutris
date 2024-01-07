@@ -36,7 +36,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.includes(MEALS.breakFast) && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.breakFast, item)}
@@ -60,7 +60,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.includes(MEALS.morningSnacks) && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.morningSnacks, item)}
@@ -84,7 +84,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.includes(MEALS.lunch) && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.lunch, item)}
@@ -108,7 +108,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.includes(MEALS.afternoonSnacks) && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.afternoonSnacks, item)}
@@ -132,7 +132,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.includes(MEALS.dinner) && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.dinner, item)}
@@ -156,7 +156,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.includes(MEALS.bedSnacks) && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   onClick={() => addFood(MEALS.bedSnacks, item)}
@@ -166,7 +166,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           )}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      {/* <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="Others-content"
@@ -180,7 +180,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               item.meals.length === 0 && (
                 <Chip
                   key={item.id}
-                  label={item.name}
+                  label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
                   //   onClick={() => addFood(MEALS.morningSnacks, item)}
@@ -189,7 +189,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               )
           )}
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
     </>
   );
 }
