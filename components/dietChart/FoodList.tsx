@@ -166,7 +166,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           )}
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      {/* <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="Others-content"
@@ -189,7 +189,7 @@ export default function FoodList({ addFood }: FoodListPropsType) {
               )
           )}
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
     </>
   );
 }

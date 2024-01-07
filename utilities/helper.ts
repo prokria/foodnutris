@@ -25,3 +25,11 @@ export function getRandomColor(): ColorType {
 export function isItemExists(arr: FoodDataType[], idToCheck: number): boolean {
   return arr.some((obj) => obj.id === idToCheck);
 }
+
+export function formatNumber(inputNumber: number) {
+  if (Number.isInteger(inputNumber)) {
+    return inputNumber;
+  } else {
+    return parseFloat(inputNumber.toFixed(2));
+  }
+}

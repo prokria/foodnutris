@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { MEALS } from "../../utilities/constants";
 import { FoodDataType } from "../../utilities/foods";
+import { formatNumber } from "../../utilities/helper";
 type DietCalculationPropsType = {
   breakfast: FoodDataType[];
   msnacks: FoodDataType[];
@@ -43,7 +44,7 @@ export default function DietCalculation({
       return accumulator;
     }, 0);
 
-    return total;
+    return formatNumber(total);
   };
   const totalValue = (
     identifier: "calorie" | "carbohydrate" | "fat" | "protein" | "fiber"
@@ -123,7 +124,9 @@ export default function DietCalculation({
       }, 0);
     }
 
-    return bfTotal + msTotal + lnTotal + asTotal + dnTotal + bsTotal;
+    return formatNumber(
+      bfTotal + msTotal + lnTotal + asTotal + dnTotal + bsTotal
+    );
   };
   return (
     <>
