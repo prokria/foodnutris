@@ -7,6 +7,8 @@ import { isItemExists } from "../../utilities/helper";
 import FoodList from "../../components/dietChart/FoodList";
 import SelectedFood from "../../components/dietChart/SelectedFood";
 import DietCalculation from "../../components/dietChart/Calculation";
+import Prescription from "../../components/dietChart/Prescription";
+import ReactPDF, { PDFDownloadLink } from "@react-pdf/renderer";
 
 const DietChart: NextPage = () => {
   const [breakfast, setBreakfast] = useState<FoodDataType[]>([]);
@@ -164,6 +166,11 @@ const DietChart: NextPage = () => {
               updateFoodServe(meal, foodId, serve)
             }
           />
+          <PDFDownloadLink document={<Prescription />} fileName="somename.pdf">
+            {({ loading }) =>
+              loading ? "Loading document..." : "Download now!"
+            }
+          </PDFDownloadLink>
         </Grid>
         <Grid item xs={12} md={8}>
           <DietCalculation
