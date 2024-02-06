@@ -6,6 +6,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Chip,
+  Button,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -34,14 +35,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.breakFast) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.breakFast, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.breakFast, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>
@@ -58,14 +58,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.morningSnacks) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.morningSnacks, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.morningSnacks, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>
@@ -82,14 +81,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.lunch) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.lunch, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.lunch, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>
@@ -106,14 +104,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.afternoonSnacks) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.afternoonSnacks, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.afternoonSnacks, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>
@@ -130,14 +127,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.dinner) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.dinner, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.dinner, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>
@@ -154,14 +150,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.bedSnacks) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.bedSnacks, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.bedSnacks, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>
@@ -178,14 +173,13 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           {foodData.map(
             (item: FoodDataType) =>
               item.meals.includes(MEALS.fastFood) && (
-                <Chip
-                  key={item.id}
-                  label={`${item.name} | ${item.calorie}`}
-                  variant="outlined"
-                  sx={{ margin: 0.5 }}
-                  onClick={() => addFood(MEALS.fastFood, item)}
+                <Button
+                  sx={{ margin: 0.5, border: 2 }}
                   color={item.color}
-                />
+                  onClick={() => addFood(MEALS.fastFood, item)}
+                  key={item.id}
+                  variant="outlined"
+                >{`${item.name} | ${item.calorie}`}</Button>
               )
           )}
         </AccordionDetails>

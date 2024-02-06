@@ -48,7 +48,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner"],
+    meals: ["FastFood"],
     id: 3,
     name: "চিকেন কাটলেট",
     nameEn: "Chicken কাটলেট",
@@ -63,7 +63,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "Dinner"],
+    meals: ["FastFood"],
     id: 4,
     name: "চিকেন ফ্রাই",
     nameEn: "Chicken ফ্রাই",
@@ -288,7 +288,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "Dinner"],
+    meals: ["FastFood"],
     id: 19,
     name: "ফিশ ফিঙ্গার",
     nameEn: "Fish Finger",
@@ -378,7 +378,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Dinner"],
+    meals: ["BreakFast"],
     id: 25,
     name: "ডিম পোচ (তেল ছাড়া)",
     nameEn: "Egg পোচ (তেল ছাড়া)",
@@ -393,7 +393,7 @@ const foodData: FoodDataType[] = [
     unit: "pc",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Dinner"],
+    meals: ["BreakFast"],
     id: 26,
     name: "ডিম পোচ (তেল দিয়ে)",
     nameEn: "Egg পোচ (তেল দিয়ে)",
@@ -408,7 +408,7 @@ const foodData: FoodDataType[] = [
     unit: "pc",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Dinner"],
+    meals: ["BreakFast", "MorningSnacks"],
     id: 27,
     name: "সিদ্ধ ডিম",
     nameEn: "সিদ্ধ ডিম",
@@ -423,10 +423,10 @@ const foodData: FoodDataType[] = [
     unit: "pc",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Lunch", "Dinner"],
+    meals: ["BreakFast"],
     id: 28,
     name: "ডিম ভাজি",
-    nameEn: "Egg ভাজি",
+    nameEn: "Egg Fry",
     calorie: 133,
     carbohydrate: 3,
     fat: 12,
@@ -453,7 +453,7 @@ const foodData: FoodDataType[] = [
     unit: "ml",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Dinner", "BedSnacks"],
+    meals: ["BreakFast", "MorningSnacks", "BedSnacks"],
     id: 30,
     name: "সয়া দুধ",
     nameEn: "সয়া দুধ",
@@ -468,7 +468,7 @@ const foodData: FoodDataType[] = [
     unit: "ml",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Dinner", "BedSnacks"],
+    meals: ["BreakFast", "MorningSnacks", "BedSnacks"],
     id: 31,
     name: "লো ফ্যাট দুধ",
     nameEn: "লো ফ্যাট দুধ",
@@ -513,7 +513,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks"],
+    meals: ["FastFood"],
     id: 34,
     name: "চকলেট",
     nameEn: "চকলেট",
@@ -528,7 +528,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["FastFood", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 35,
     name: "মেয়োনিজ",
     nameEn: "মেয়োনিজ",
@@ -543,7 +543,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 36,
     name: "সামুচা",
     nameEn: "সামুচা",
@@ -558,7 +558,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 37,
     name: "স্প্রিং অনিয়ন",
     nameEn: "স্প্রিং অনিয়ন",
@@ -573,7 +573,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 38,
     name: "আলুর চপ",
     nameEn: "আলুর চপ",
@@ -588,7 +588,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 39,
     name: "পেয়াজু/ পাকোড়া",
     nameEn: "পেয়াজু/ পাকোড়া",
@@ -603,7 +603,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 40,
     name: "ডালপুরি",
     nameEn: "ডালপুরি",
@@ -618,7 +618,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 41,
     name: "সিঙ্গারা",
     nameEn: "সিঙ্গারা",
@@ -633,7 +633,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 42,
     name: "হরলিক্স",
     nameEn: "হরলিক্স",
@@ -648,7 +648,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 43,
     name: "চকলেট ওভালটিন",
     nameEn: "চকলেট ওভালটিন",
@@ -663,7 +663,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 44,
     name: "ওভালটিন",
     nameEn: "ওভালটিন",
@@ -678,7 +678,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 45,
     name: "ভাপা পিঠা",
     nameEn: "ভাপা পিঠা",
@@ -693,7 +693,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 46,
     name: "তেলের পিঠা(মালপোয়া)",
     nameEn: "তেলের পিঠা(মালপোয়া)",
@@ -708,7 +708,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 47,
     name: "পাটিসাপটা",
     nameEn: "পাটিসাপটা",
@@ -738,7 +738,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks", "BedSnacks"],
     id: 49,
     name: "ফালুদা",
     nameEn: "ফালুদা",
@@ -753,7 +753,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks", "BedSnacks"],
     id: 50,
     name: "ফলের কাস্টার্ড",
     nameEn: "ফলের কাস্টার্ড",
@@ -1008,7 +1008,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 67,
     name: "চিকেন স্যান্ডউইচ",
     nameEn: "Chicken স্যান্ডউইচ",
@@ -1023,7 +1023,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 68,
     name: "হট ডগ",
     nameEn: "হট ডগ",
@@ -1038,7 +1038,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 69,
     name: "চিকেন রোল",
     nameEn: "Chicken রোল",
@@ -1053,7 +1053,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 70,
     name: "আলুর চিপস",
     nameEn: "আলুর চিপস",
@@ -1068,7 +1068,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 71,
     name: "বিফ বার্গার",
     nameEn: "বিফ বার্গার",
@@ -1083,7 +1083,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 72,
     name: "চিকেন বার্গার",
     nameEn: "Chicken বার্গার",
@@ -1098,7 +1098,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 73,
     name: "ফুসকা",
     nameEn: "ফুসকা",
@@ -1113,7 +1113,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 74,
     name: "চটপটি",
     nameEn: "চটপটি",
@@ -1128,7 +1128,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 75,
     name: "পাপড় তেলে ভাজা",
     nameEn: "পাপড় তেলে ভাজা",
@@ -1143,7 +1143,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 76,
     name: "পাপড় গ্রিল্ড/ মাইক্রোওভেন",
     nameEn: "পাপড় গ্রিল্ড/ মাইক্রোওভেন",
@@ -1158,7 +1158,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 77,
     name: "নিমকি",
     nameEn: "নিমকি",
@@ -1173,7 +1173,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 78,
     name: "পিজ্জা",
     nameEn: "পিজ্জা",
@@ -1188,7 +1188,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 79,
     name: "নোনতা বিস্কুট",
     nameEn: "নোনতা বিস্কুট",
@@ -1203,7 +1203,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 80,
     name: "ক্রিম বিস্কুট",
     nameEn: "ক্রিম বিস্কুট",
@@ -1218,7 +1218,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 81,
     name: "টোস্ট বিস্কুট",
     nameEn: "টোস্ট বিস্কুট",
@@ -1248,7 +1248,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 83,
     name: "পোলাও (মাংস/শাক)",
     nameEn: "পোলাও (মাংস/শাক)",
@@ -1263,7 +1263,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 84,
     name: "বিরিয়ানি (মাংস/শাক)",
     nameEn: "বিরিয়ানি (মাংস/শাক)",
@@ -1278,7 +1278,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 85,
     name: "খিচুড়ি",
     nameEn: "খিচুড়ি",
@@ -1293,7 +1293,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 86,
     name: "মাছের ঝোল (রুই/ইলিশ)",
     nameEn: "Fishের ঝোল (রুই/ইলিশ)",
@@ -1308,7 +1308,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 87,
     name: "ভাত",
     nameEn: "Rice",
@@ -1338,7 +1338,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch"],
     id: 89,
     name: "লাল শাক",
     nameEn: "লাল শাক",
@@ -1353,7 +1353,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch"],
     id: 90,
     name: "পালং শাক",
     nameEn: "পালং শাক",
@@ -1368,7 +1368,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 91,
     name: "ডাল (মসুর/মুগ)",
     nameEn: "ডাল (মসুর/মুগ)",
@@ -1383,7 +1383,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 92,
     name: "মাংসের ঝোল (গরু/মুরগ)",
     nameEn: "মাংসের ঝোল (গরু/মুরগ)",
@@ -1398,7 +1398,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 93,
     name: "ভর্তা (বেগুন/আলু)",
     nameEn: "ভর্তা (বেগুন/আলু)",
@@ -1413,7 +1413,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Dinner"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 94,
     name: "স্যুপ (মাংস/শাক)",
     nameEn: "স্যুপ (মাংস/শাক)",
@@ -1428,7 +1428,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["Dinner"],
+    meals: ["Lunch", "Dinner"],
     id: 95,
     name: "সালাদ",
     nameEn: "সালাদ",
@@ -1518,7 +1518,7 @@ const foodData: FoodDataType[] = [
     unit: "pcs",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
+    meals: ["FastFood"],
     id: 101,
     name: "চিজ কেক",
     nameEn: "চিজ কেক",
@@ -1533,7 +1533,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
+    meals: ["FastFood"],
     id: 102,
     name: "চকলেট কেক",
     nameEn: "চকলেট কেক",
@@ -1548,7 +1548,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks", "BedSnacks"],
+    meals: ["FastFood"],
     id: 103,
     name: "প্লেইন কেক",
     nameEn: "প্লেইন কেক",
@@ -1623,7 +1623,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 108,
     name: "আইস ক্রিম",
     nameEn: "আইস ক্রিম",
@@ -1638,7 +1638,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood"],
     id: 109,
     name: "পেস্ট্রি",
     nameEn: "পেস্ট্রি",
@@ -1653,7 +1653,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 110,
     name: "ছানার সন্দেশ",
     nameEn: "ছানার সন্দেশ",
@@ -1668,7 +1668,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 111,
     name: "বালুসাই",
     nameEn: "বালুসাই",
@@ -1683,7 +1683,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 112,
     name: "রসমালাই১০০গ্রাম",
     nameEn: "রসমালাই১০০গ্রাম",
@@ -1713,7 +1713,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "AfternoonSnacks"],
+    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
     id: 114,
     name: "সুজির হালুয়া",
     nameEn: "সুজির হালুয়া",
@@ -1743,7 +1743,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["Lunch", "AfternoonSnacks"],
     id: 116,
     name: "জর্দা",
     nameEn: "জর্দা",
@@ -1758,7 +1758,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 117,
     name: "রসগোল্লা",
     nameEn: "রসগোল্লা",
@@ -1773,7 +1773,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 118,
     name: "চমচম",
     nameEn: "Chamcham",
@@ -1788,7 +1788,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 119,
     name: "লাড্ডু",
     nameEn: "লাড্ডু",
@@ -1803,7 +1803,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 120,
     name: "লালমোহন",
     nameEn: "লালমোহন",
@@ -1833,7 +1833,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 122,
     name: "নারিকেল বরফি",
     nameEn: "নারিকেল বরফি",
@@ -1848,7 +1848,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
     id: 123,
     name: "পায়েশ",
     nameEn: "পায়েশ",
@@ -1863,7 +1863,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "Lunch", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 124,
     name: "ক্যারামেল পুডিং",
     nameEn: "ক্যারামেল পুডিং",
@@ -1878,22 +1878,22 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["AfternoonSnacks"],
     id: 125,
-    name: "মেয়নেজ",
-    nameEn: "মেয়নেজ",
-    calorie: 100,
-    carbohydrate: 0,
-    fat: 10,
-    protein: 0,
-    fiber: 0,
+    name: "চিড়া",
+    nameEn: "চিড়া",
+    calorie: 80,
+    carbohydrate: 19,
+    fat: 0,
+    protein: 1,
+    fiber: 0.5,
     color: "info",
-    size: 30,
+    size: 0.25,
     serve: 1,
-    unit: "g",
+    unit: "Cup",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["MorningSnacks", "AfternoonSnacks"],
     id: 126,
     name: "লো ফ্যাট মেয়নেইস",
     nameEn: "লো ফ্যাট মেয়নেইস",
