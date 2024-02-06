@@ -7,4 +7,5 @@ export const MEALS = {
   afternoonSnacks: "AfternoonSnacks",
   dinner: "Dinner",
   bedSnacks: "BedSnacks",
+  fastFood: "FastFood",
 };

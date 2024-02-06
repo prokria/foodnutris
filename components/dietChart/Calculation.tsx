@@ -18,6 +18,7 @@ type DietCalculationPropsType = {
   asnacks: FoodDataType[];
   bsnacks: FoodDataType[];
   dinner: FoodDataType[];
+  fast: FoodDataType[];
 };
 export default function DietCalculation({
   breakfast,
@@ -26,6 +27,7 @@ export default function DietCalculation({
   asnacks,
   dinner,
   bsnacks,
+  fast,
 }: DietCalculationPropsType) {
   const itemSum = (
     mealItems: FoodDataType[],
@@ -124,8 +126,21 @@ export default function DietCalculation({
       }, 0);
     }
 
+    let fastTotal = 0;
+    if (fast.length) {
+      fastTotal = fast.reduce((accumulator, currentValue) => {
+        if (currentValue.hasOwnProperty(identifier)) {
+          const value = currentValue[identifier] * currentValue.serve;
+          if (!isNaN(value)) {
+            return accumulator + value;
+          }
+        }
+        return accumulator;
+      }, 0);
+    }
+
     return formatNumber(
-      bfTotal + msTotal + lnTotal + asTotal + dnTotal + bsTotal
+      bfTotal + msTotal + lnTotal + asTotal + dnTotal + bsTotal + fastTotal
     );
   };
   return (
@@ -225,6 +240,18 @@ export default function DietCalculation({
               </TableCell>
               <TableCell align="right">{itemSum(bsnacks, "protein")}</TableCell>
               <TableCell align="right">{itemSum(bsnacks, "fiber")}</TableCell>
+            </TableRow>
+            <TableRow
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell>{MEALS.fastFood}</TableCell>
+              <TableCell align="right">{itemSum(fast, "calorie")}</TableCell>
+              <TableCell align="right">{itemSum(fast, "fat")}</TableCell>
+              <TableCell align="right">
+                {itemSum(fast, "carbohydrate")}
+              </TableCell>
+              <TableCell align="right">{itemSum(fast, "protein")}</TableCell>
+              <TableCell align="right">{itemSum(fast, "fiber")}</TableCell>
             </TableRow>
             <TableRow
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
