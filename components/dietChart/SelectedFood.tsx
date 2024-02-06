@@ -3,7 +3,6 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Chip,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { MEALS } from "../../utilities/constants";
@@ -17,6 +16,7 @@ type SelectedFoodPropsType = {
   asnacks: FoodDataType[];
   bsnacks: FoodDataType[];
   dinner: FoodDataType[];
+  fast: FoodDataType[];
   removeFood: (meal: string, foodId: number) => void;
   updateFoodServe: (meal: string, foodId: number, serve: number) => void;
 };
@@ -29,6 +29,7 @@ export default function SelectedFood({
   asnacks,
   dinner,
   bsnacks,
+  fast,
 }: SelectedFoodPropsType) {
   return (
     <>
@@ -176,6 +177,30 @@ export default function SelectedFood({
                 }
                 updateFoodServe={(foodId: number, serve: number) =>
                   updateFoodServe(MEALS.bedSnacks, foodId, serve)
+                }
+              />
+            ))}
+        </AccordionDetails>
+      </Accordion>
+      <Accordion disabled={!fast || !fast.length}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls={MEALS.fastFood + "-diet"}
+          id={MEALS.fastFood}
+        >
+          <Typography>{MEALS.fastFood}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          {fast &&
+            fast.map((item: FoodDataType) => (
+              <ChartFoodItem
+                key={item.id}
+                food={item}
+                removeFood={(foodId: number) =>
+                  removeFood(MEALS.fastFood, foodId)
+                }
+                updateFoodServe={(foodId: number, serve: number) =>
+                  updateFoodServe(MEALS.fastFood, foodId, serve)
                 }
               />
             ))}

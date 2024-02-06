@@ -166,30 +166,30 @@ export default function FoodList({ addFood }: FoodListPropsType) {
           )}
         </AccordionDetails>
       </Accordion>
-      {/* <Accordion>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="Others-content"
+          aria-controls={MEALS.fastFood + "-content"}
           id="Others"
         >
-          <Typography>Others</Typography>
+          <Typography>{MEALS.fastFood}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {foodData.map(
             (item: FoodDataType) =>
-              item.meals.length === 0 && (
+              item.meals.includes(MEALS.fastFood) && (
                 <Chip
                   key={item.id}
                   label={`${item.name} | ${item.calorie}`}
                   variant="outlined"
                   sx={{ margin: 0.5 }}
-                  //   onClick={() => addFood(MEALS.morningSnacks, item)}
+                  onClick={() => addFood(MEALS.fastFood, item)}
                   color={item.color}
                 />
               )
           )}
         </AccordionDetails>
-      </Accordion> */}
+      </Accordion>
     </>
   );
 }

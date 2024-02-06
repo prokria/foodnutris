@@ -15,6 +15,7 @@ const DietChart: NextPage = () => {
   const [bsnacks, setBsnacks] = useState<FoodDataType[]>([]);
   const [lunch, setLunch] = useState<FoodDataType[]>([]);
   const [dinner, setDinner] = useState<FoodDataType[]>([]);
+  const [fast, setFast] = useState<FoodDataType[]>([]);
 
   const addFood = (meal: string, foodItem: FoodDataType) => {
     switch (meal) {
@@ -43,6 +44,11 @@ const DietChart: NextPage = () => {
           setBsnacks((prevArray) => [...prevArray, foodItem]);
         }
         break;
+      case MEALS.fastFood:
+        if (!isItemExists(fast, foodItem.id)) {
+          setFast((prevArray) => [...prevArray, foodItem]);
+        }
+        break;
       default:
         if (!isItemExists(dinner, foodItem.id)) {
           setDinner((prevArray) => [...prevArray, foodItem]);
@@ -67,6 +73,9 @@ const DietChart: NextPage = () => {
         break;
       case MEALS.bedSnacks:
         setBsnacks((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
+        break;
+      case MEALS.fastFood:
+        setFast((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
         break;
       default:
         setDinner((prevArray) => prevArray.filter((obj) => obj.id !== foodId));
@@ -124,6 +133,16 @@ const DietChart: NextPage = () => {
         });
         setBsnacks(bsnacksUpdate);
         break;
+      case MEALS.fastFood:
+        let fastUpdate = [...bsnacks];
+        fastUpdate = fastUpdate.map((item) => {
+          if (item.id === foodId) {
+            return { ...item, serve: serve };
+          }
+          return item;
+        });
+        setFast(fastUpdate);
+        break;
       default:
         let dinnerUpdate = [...dinner];
         dinnerUpdate = dinnerUpdate.map((item) => {
@@ -157,6 +176,7 @@ const DietChart: NextPage = () => {
             msnacks={msnacks}
             dinner={dinner}
             bsnacks={bsnacks}
+            fast={fast}
             removeFood={(meal: string, foodId: number) =>
               removeFood(meal, foodId)
             }
@@ -173,6 +193,7 @@ const DietChart: NextPage = () => {
             msnacks={msnacks}
             dinner={dinner}
             bsnacks={bsnacks}
+            fast={fast}
           />
         </Grid>
       </Grid>
@@ -180,6 +201,3 @@ const DietChart: NextPage = () => {
   );
 };
 export default DietChart;
-function isExists() {
-  throw new Error("Function not implemented.");
-}

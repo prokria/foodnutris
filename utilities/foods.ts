@@ -528,7 +528,7 @@ const foodData: FoodDataType[] = [
     unit: "g",
   },
   {
-    meals: ["BreakFast", "MorningSnacks", "AfternoonSnacks"],
+    meals: ["FastFood", "MorningSnacks", "AfternoonSnacks"],
     id: 35,
     name: "মেয়োনিজ",
     nameEn: "মেয়োনিজ",
